@@ -8,13 +8,13 @@ if ! docker images | grep sanhui; then
 fi
 
 # 镜像存在时，检查容器是否存在
-if docker ps -a | grep -i sanhui; then
+if docker ps -a | grep -i webapp-sanhui; then
     # 容器存在时则删除容器
     echo 'The docker container <sanhui> already exist, deleting it...'
     docker rm -f webapp-sanhui
     # 启动容器
     docker run -itd \
-               --link mysql:mysql \
+               --link mysql-sanhui:mysql \
                -v /root/git_repo/SanHui/:/home/docker/code/SanHui \
                --name webapp-sanhui \
                -p 80:80 \
@@ -22,10 +22,10 @@ if docker ps -a | grep -i sanhui; then
 else
     # 第一次创建容器时需要更新数据库
     docker run -itd \
-               --link mysql:mysql \
+               --link mysql-sanhui:mysql \
                -v /root/git_repo/SanHui/:/home/docker/code/SanHui \
                --name webapp-sanhui \
                -p 80:80 \
            sanhui \
-           sh -c 'python /home/docker/code/SanHui/manage.py migrate && supervisord -n'
+           sh -c 'python3 /home/docker/code/SanHui/manage.py migrate && supervisord -n'
 fi
