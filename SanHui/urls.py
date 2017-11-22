@@ -17,9 +17,10 @@ from django.conf.urls import url
 from django.contrib import admin
 import xadmin
 
-from general_data.views import IndexView
+from general_data.views import IndexView, InfrastructureView
 
 urlpatterns = [
     url(r'^xadmin/', xadmin.site.urls),
     url(r'^$', IndexView.as_view(), name='index'),
+    url(r'^infrastructure/$', InfrastructureView.as_view(), name='infrastructure'),
 ]

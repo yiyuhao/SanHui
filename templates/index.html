@@ -49,13 +49,13 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
-					<h2>欢迎来到三会村</h2>
+					<h2>欢迎来到{{ village_name }}</h2>
 				</div>
 			</div>
 
 			<div class="row">
 				<div class="col-md-12"> 
-					<p>已录入500+人口数据</p>
+					<p>已录入{{ people_nums }}人口数据</p>
 				</div>
 			</div>
 
@@ -123,7 +123,7 @@
 							<p>
 								（三）房屋数量：土壤土壤
 							</p>
-							<a href="info.html" class="btn btn-learn-more">LEARN MORE <i class="ion-ios-arrow-right"></i></a>
+							<a href="{% url 'infrastructure' %}" class="btn btn-learn-more">LEARN MORE <i class="ion-ios-arrow-right"></i></a>
 						</div>
 					</div>
 				</div>
