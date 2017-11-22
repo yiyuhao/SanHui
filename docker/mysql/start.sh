@@ -1,7 +1,7 @@
 #!/bin/bash 
 
 echo "create a mysql container.."
-docker run -d --name mysql \
+docker run -d --name mysql-sanhui \
            -v $(pwd)/conf.d:/etc/mysql/conf.d \
            -v $(pwd)/data:/var/lib/mysql \
            -e MYSQL_ROOT_PASSWORD="huawei@123" \
