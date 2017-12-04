@@ -23,8 +23,7 @@ class PersonnelInformationAdmin:
                     'is_rural_social_endowment_insurance', 'is_medical_insurance', 'add_time']
 
     list_filter = list_display
-    search_fields = list_display
-    search_fields.remove('add_time')
+    search_fields = ['name', 'group']
 
 
 xadmin.site.register(Province, ProvinceAdmin)
