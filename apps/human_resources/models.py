@@ -5,7 +5,6 @@ from django.db import models
 
 class Province(models.Model):
     name = models.CharField(verbose_name='省份(直辖市)', max_length=20)
-    desc = models.CharField(verbose_name='描述', max_length=200, null=True, blank=True)
     add_time = models.DateTimeField(verbose_name='添加时间', default=datetime.now)
 
     class Meta:
@@ -32,7 +31,7 @@ class PersonnelInformation(models.Model):
     name = models.CharField(verbose_name='姓名', max_length=20)
     group = models.CharField(verbose_name='组数', max_length=4)
     gender = models.CharField(verbose_name='性别', max_length=6, choices=(
-        ('male', '男'), ('female', '女')))
+        ('male', '男'), ('female', '女')), default='male')
     birthday = models.DateField(verbose_name='出生年月', null=True, blank=True)
     permanent_residence = models.ForeignKey(Province, verbose_name='常住地')
     degree_of_education = models.CharField(verbose_name='文化程度', max_length=5, choices=(
@@ -44,7 +43,7 @@ class PersonnelInformation(models.Model):
 
     is_village_cadres = models.CharField(verbose_name='是否为村干部及职位', max_length=30, default='否')
     is_village_backup_cadres = models.CharField(verbose_name='是否为村后备干部', max_length=3, choices=(
-        ('yes', '是'), ('no', '否')))
+        ('yes', '是'), ('no', '否')), default='no')
     is_local_talent = models.CharField(verbose_name='是否为乡土人才及技能', max_length=30, default='否')
     is_career_creating_talent = models.CharField(verbose_name='是否创业人才及创业方向', max_length=30, default='否')
 
@@ -58,16 +57,17 @@ class PersonnelInformation(models.Model):
 
     phone_num = models.CharField(verbose_name='联系方式', max_length=11, null=True, blank=True)
     health_status = models.CharField(verbose_name='身体状况', max_length=9, choices=(
-        ('jk', '健康'), ('hyjb', '患有疾病'), ('cj', '残疾')))
+        ('jk', '健康'), ('hyjb', '患有疾病'), ('cj', '残疾')), default='jk')
     is_basic_living_allowances = models.CharField(verbose_name='最低保障', max_length=3, choices=(
-        ('db', '低保'), ('wb', '五保'), ('w', '无')))
+        ('db', '低保'), ('wb', '五保'), ('w', '无')), default='w')
     is_rural_social_endowment_insurance = models.CharField(verbose_name='是否农保', max_length=3, choices=(
-        ('yes', '是'), ('no', '否')))
+        ('yes', '是'), ('no', '否')), default='yes')
     is_medical_insurance = models.CharField(verbose_name='是否参加医保', max_length=3, choices=(
-        ('yes', '是'), ('no', '否')))
+        ('yes', '是'), ('no', '否')), default='yes')
     is_social_security = models.CharField(verbose_name='是否参加社保', max_length=3, choices=(
-        ('yes', '是'), ('no', '否')))
+        ('yes', '是'), ('no', '否')), default='yes')
     add_time = models.DateTimeField(verbose_name='添加时间', default=datetime.now)
+    remarks = models.CharField(verbose_name='备注', max_length=300, null=True, blank=True)
 
     class Meta:
         verbose_name = '人员信息'
