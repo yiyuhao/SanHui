@@ -4,9 +4,9 @@ from .models import Province, EmploymentIntention, PersonnelInformation
 
 
 class ProvinceAdmin:
-    list_display = ['name', 'desc', 'add_time']
+    list_display = ['name', 'add_time']
     list_filter = list_display
-    search_fields = ['name', 'desc']
+    search_fields = ['name']
 
 
 class EmploymentIntentionAdmin:
@@ -23,7 +23,7 @@ class PersonnelInformationAdmin:
                     'is_rural_social_endowment_insurance', 'is_medical_insurance', 'add_time']
 
     list_filter = list_display
-    search_fields = ['name', 'group']
+    search_fields = ['name', 'group', 'school_major_field', 'working_industry', 'working_position', 'remarks']
 
 
 xadmin.site.register(Province, ProvinceAdmin)
