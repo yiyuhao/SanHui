@@ -1,6 +1,6 @@
 import xadmin
 
-from .models import Province, EmploymentIntention, PersonnelInformation
+from .models import Province, EmploymentIntention, Family, PersonnelInformation
 
 
 class ProvinceAdmin:
@@ -15,8 +15,16 @@ class EmploymentIntentionAdmin:
     search_fields = ['name']
 
 
+class FamilyAdmin:
+    list_display = ['householder', 'is_poor_households', 'causes_of_poverty', 'per_capita_arable_land_area',
+                    'per_capita_woodland_area', 'per_capita_circulation_area', 'annual_income', 'medical_expenditure',
+                    'education_expenditure', 'living_production_expenditure', 'add_time', 'remarks']
+    list_filter = list_display
+    search_fields = ['householder', 'causes_of_poverty', 'remarks']
+
+
 class PersonnelInformationAdmin:
-    list_display = ['name', 'group', 'gender', 'birthday', 'permanent_residence', 'degree_of_education',
+    list_display = ['name', 'group', 'gender', 'birthday', 'permanent_residence', 'home', 'degree_of_education',
                     'political_status', 'school_major_field', 'employment_intention', 'is_village_cadres',
                     'is_village_backup_cadres', 'is_local_talent', 'is_career_creating_talent', 'working_place',
                     'working_years', 'working_position', 'phone_num', 'health_status', 'is_basic_living_allowances',
@@ -28,4 +36,5 @@ class PersonnelInformationAdmin:
 
 xadmin.site.register(Province, ProvinceAdmin)
 xadmin.site.register(EmploymentIntention, EmploymentIntentionAdmin)
+xadmin.site.register(Family, FamilyAdmin)
 xadmin.site.register(PersonnelInformation, PersonnelInformationAdmin)

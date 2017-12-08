@@ -27,6 +27,29 @@ class EmploymentIntention(models.Model):
         return self.name
 
 
+class Family(models.Model):
+    householder = models.CharField(verbose_name='户主', max_length=20)
+    is_poor_households = models.CharField(verbose_name='是否为贫困户', max_length=3, choices=(
+        ('yes', '是'), ('no', '否')), default='no')
+    causes_of_poverty = models.CharField(verbose_name='致贫原因', max_length=100, null=True, blank=True)
+    per_capita_arable_land_area = models.FloatField(verbose_name='人均耕地面积(亩)', default=0)
+    per_capita_woodland_area = models.FloatField(verbose_name='人均林地面积(亩)', default=0)
+    per_capita_circulation_area = models.FloatField(verbose_name='人均已流转面积(亩)', default=0)
+    annual_income = models.IntegerField(verbose_name='年收入(元)', default=0)
+    medical_expenditure = models.IntegerField(verbose_name='医疗支出(元)', default=0)
+    education_expenditure = models.IntegerField(verbose_name='教育支出(元)', default=0)
+    living_production_expenditure = models.IntegerField(verbose_name='生活生产支出(元)', default=0)
+    add_time = models.DateTimeField(verbose_name='添加时间', default=datetime.now)
+    remarks = models.CharField(verbose_name='备注', max_length=300, null=True, blank=True)
+
+    class Meta:
+        verbose_name = '户(家庭)信息'
+        verbose_name_plural = verbose_name
+
+    def __str__(self):
+        return '户主: ' + self.householder
+
+
 class PersonnelInformation(models.Model):
     name = models.CharField(verbose_name='姓名', max_length=20)
     group = models.CharField(verbose_name='组数', max_length=4)
@@ -34,6 +57,8 @@ class PersonnelInformation(models.Model):
         ('male', '男'), ('female', '女')), default='male')
     birthday = models.DateField(verbose_name='出生年月', null=True, blank=True)
     permanent_residence = models.ForeignKey(Province, verbose_name='常住地')
+    home = models.ForeignKey(Family, verbose_name='所在户(户主)', null=True, blank=True)
+
     degree_of_education = models.CharField(verbose_name='文化程度', max_length=5, choices=(
         ('cz', '初中及以下'), ('gz', '高中'), ('dz', '大专'), ('bk', '本科'), ('ss', '硕士'), ('bs', '博士')))
     political_status = models.CharField(verbose_name='政治面貌', max_length=6, choices=(
