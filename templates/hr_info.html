@@ -1,0 +1,434 @@
+{% load static %}
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>三会村-基层组织</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="" />
+
+    <!-- Facebook and Twitter integration -->
+    <meta property="og:title" content=""/>
+    <meta property="og:image" content=""/>
+    <meta property="og:url" content=""/>
+    <meta property="og:site_name" content=""/>
+    <meta property="og:description" content=""/>
+    <meta name="twitter:title" content="" />
+    <meta name="twitter:image" content="" />
+    <meta name="twitter:url" content="" />
+    <meta name="twitter:card" content="" />
+
+    <!-- Place favicon.ico and apple-touch-icon.png' %} in the root directory -->
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <!-- Google Webfonts -->
+    <!--<link href='http://fonts.useso.com/css?family=Roboto:400,300,100,500' rel='stylesheet' type='text/css'>-->
+    <!--<link href='http://fonts.useso.com/css?family=Roboto+Slab:400,300,100,500' rel='stylesheet' type='text/css'>-->
+
+    <!-- Animate.css' %} -->
+    <link rel="stylesheet" href="{% static 'css/animate.css' %}">
+    <!-- Icomoon Icon Fonts-->
+    <link rel="stylesheet" href="{% static 'css/icomoon.css' %}">
+    <!-- Simple Line Icons -->
+    <!-- Theme Style -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/paging.css' %}">
+    <!-- Modernizr JS -->
+    <script src="{% static 'js/modernizr-2.6.2.min.js' %}"></script>
+    <!-- FOR IE9 below -->
+    <!--[if lt IE 9]>
+    <script src="{% static 'js/respond.min.js' %}"></script>
+    <![endif]-->
+
+</head>
+<body>
+<header id="fh5co-header" role="banner">
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 col-md-offset-2">
+                    <!--<div class="navbar-header">-->
+                    <!--&lt;!&ndash; Mobile Toggle Menu Button &ndash;&gt;-->
+                    <!--<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle visible-xs-block" data-toggle="collapse" data-target="#fh5co-navbar" aria-expanded="false" aria-controls="navbar"><i></i></a>-->
+                    <!--<a class="navbar-brand" href="index.html">Clean</a>-->
+                    <!--</div>-->
+                    <div id="fh5co-navbar" class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="index.html"><span>首页 <span class="border"></span></span></a></li>
+                            <li><a href="base_info.html"><span>基础设施 <span class="border"></span></span></a></li>
+                            <li><a href="industry_info.html"><span>产业发展 <span class="border"></span></span></a></li>
+                            <li class="active"><a href="hr_info.html"><span>人力资源 <span class="border"></span></span></a></li>
+                            <li><a href="live_info.html"><span>扶贫民生 <span class="border"></span></span></a></li>
+                            <li><a href="party_info.html"><span>基础组织 <span class="border"></span></span></a></li>
+                            <li><a href="party_info.html"><span>地理环境 <span class="border"></span></span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+<div id="fh5co-main">
+    <div class="fh5co-intro text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <h1 class="intro-lead">人力资源</h1>
+                    <p class="">人力资源数据</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="hr-box">
+        <div class="filter-box">
+
+            <div class="filter border-bottom">
+                <div class="filter-left">
+                    组数
+                </div>
+                <div class="filter-right">
+                    <label><input type="radio" name="group" class="hidden">一组</label>
+                    <label><input type="radio" name="group" class="hidden">二组</label>
+                    <label><input type="radio" name="group" class="hidden">三组</label>
+                    <label><input type="radio" name="group" class="hidden">四组</label>
+                    <label><input type="radio" name="group" class="hidden">五组</label>
+                    <label><input type="radio" name="group" class="hidden">六组</label>
+                    <label><input type="radio" name="group" class="hidden">七组</label>
+                </div>
+            </div>
+            <div class="filter border-bottom">
+                <div class="filter-left">
+                    性别
+                </div>
+                <div class="filter-right">
+                    <label><input type="radio" name="sex" class="hidden">男</label>
+                    <label><input type="radio" name="sex" class="hidden">女</label>
+                </div>
+            </div>
+            <div class="filter border-bottom">
+                <div class="filter-left">
+                    年龄
+                </div>
+                <div class="filter-right">
+                    <label><input type="radio" name="age" class="hidden">20岁以下</label>
+                    <label><input type="radio" name="age" class="hidden">20-40岁</label>
+                    <label><input type="radio" name="age" class="hidden">40-70岁</label>
+                    <label><input type="radio" name="age" class="hidden">70岁以上</label>
+                </div>
+            </div>
+            <div class="filter border-bottom">
+                <div class="filter-left">
+                    常住地
+                </div>
+                <div class="filter-right">
+                    <label><input type="radio" name="address" class="hidden">本地</label>
+                    <label><input type="radio" name="address" class="hidden">四川</label>
+                    <label><input type="radio" name="address" class="hidden">浙江</label>
+                    <label><input type="radio" name="address" class="hidden">广东</label>
+                    <label><input type="radio" name="address" class="hidden">上海</label>
+                    <label><input type="radio" name="address" class="hidden">北京</label>
+                    <label><input type="radio" name="address" class="hidden">其他</label>
+                </div>
+            </div>
+            <div class="filter border-bottom">
+                <div class="filter-left">
+                    文化程度
+                </div>
+                <div class="filter-right">
+                    <label><input type="radio" name="education" class="hidden">初中及以下</label>
+                    <label><input type="radio" name="education" class="hidden">大专</label>
+                    <label><input type="radio" name="education" class="hidden">本科</label>
+                    <label><input type="radio" name="education" class="hidden">研究生</label>
+                </div>
+            </div>
+            <div class="filter border-bottom">
+                <div class="filter-left">
+                    村职务
+                </div>
+                <div class="filter-right">
+                    <label><input type="radio" name="post" class="hidden">村干部</label>
+                    <label><input type="radio" name="post" class="hidden">村后备干部</label>
+                </div>
+            </div>
+            <div class="filter border-bottom">
+                <div class="filter-left">
+                    就业方向
+                </div>
+                <div class="filter-right">
+                    <label><input type="radio" name="job" class="hidden">行政</label>
+                    <label><input type="radio" name="job" class="hidden">建筑</label>
+                    <label><input type="radio" name="job" class="hidden">种养殖</label>
+                    <label><input type="radio" name="job" class="hidden">餐饮服务</label>
+                    <label><input type="radio" name="job" class="hidden">经商</label>
+                    <label><input type="radio" name="job" class="hidden">其他</label>
+                </div>
+            </div>
+            <div class="filter border-bottom">
+                <div class="filter-left">
+                    人才信息
+                </div>
+                <div class="filter-right">
+                    <label><input type="radio" name="ability" class="hidden">技能人才</label>
+                    <label><input type="radio" name="ability" class="hidden">返乡人才</label>
+                </div>
+            </div>
+            <div class="filter border-bottom">
+                <div class="filter-left">
+                    劳动信息
+                </div>
+                <div class="filter-right">
+                    <label><input type="radio" name="work" class="hidden">外出务工</label>
+                    <label><input type="radio" name="work" class="hidden">本地劳动</label>
+                </div>
+            </div>
+            <div class="filter border-bottom">
+                <div class="filter-left">
+                    务工年限
+                </div>
+                <div class="filter-right">
+                    <label><input type="radio" name="year" class="hidden">一年以下</label>
+                    <label><input type="radio" name="year" class="hidden">1-5年</label>
+                    <label><input type="radio" name="year" class="hidden">5年以上</label>
+                </div>
+            </div>
+            <div class="filter border-bottom">
+                <div class="filter-left">
+                    务工收入
+                </div>
+                <div class="filter-right">
+                    <label><input type="radio" name="income" class="hidden">5万以下</label>
+                    <label><input type="radio" name="income" class="hidden">5-8万</label>
+                    <label><input type="radio" name="income" class="hidden">8-12万</label>
+                    <label><input type="radio" name="income" class="hidden">12万以上</label>
+                </div>
+            </div>
+            <div class="filter border-bottom">
+                <div class="filter-left">
+                    务工职务
+                </div>
+                <div class="filter-right">
+                    <label><input type="radio" name="business" class="hidden">建筑</label>
+                    <label><input type="radio" name="business" class="hidden">种养殖</label>
+                    <label><input type="radio" name="business" class="hidden">餐饮服务</label>
+                    <label><input type="radio" name="business" class="hidden">经商</label>
+                    <label><input type="radio" name="business" class="hidden">其他</label>
+                </div>
+            </div>
+            <div class="filter border-bottom">
+                <div class="filter-left">
+                    身体状况
+                </div>
+                <div class="filter-right">
+                    <label><input type="radio" name="body" class="hidden">健康</label>
+                    <label><input type="radio" name="body" class="hidden">残疾</label>
+                    <label><input type="radio" name="body" class="hidden">患有疾病</label>
+                </div>
+            </div>
+            <div class="filter border-bottom">
+                <div class="filter-left">
+                    社保情况
+                </div>
+                <div class="filter-right">
+                    <label><input type="radio" name="security" class="hidden">医保</label>
+                    <label><input type="radio" name="security" class="hidden">社保</label>
+                    <label><input type="radio" name="security" class="hidden">低保</label>
+                    <label><input type="radio" name="security" class="hidden">养老保险</label>
+                </div>
+            </div>
+        </div>
+        <div class="filter-tags">
+            <div class="pull-left" style="margin-top:5px;">
+                筛选条件：
+            </div>
+            <div class="pull-left filter-tag">
+                <span>性别：</span><span class="">男</span>
+                <span class="icon-close"></span>
+            </div>
+            <div class="pull-left filter-tag">
+                <span>年龄：</span><span class="">20岁以下</span>
+                <span class="icon-close"></span>
+            </div>
+            <div class="pull-left filter-tag">
+                <span>常住地：</span><span class="">四川</span>
+                <span class="icon-close"></span>
+            </div>
+            <div class="pull-left filter-tag">
+                <span>社保情况：</span><span class="">医保</span>
+                <span class="icon-close"></span>
+            </div>
+        </div>
+        <div style="overflow-x: auto;overflow-y: hidden">
+            <table style="width:1500px;margin:0 auto;table-layout:fixed;overflow: hidden">
+                <tr>
+                    <th style="width:35px;">组数</th>
+                    <th style="width:50px;">姓名</th>
+                    <th style="width:35px;">性别</th>
+                    <th style="width:120px;">出生年月</th>
+                    <th style="width:50px;">常住地</th>
+                    <th style="width:60px;">文化程度</th>
+                    <th style="width:60px;">政治面貌</th>
+                    <th>在读院校</th>
+                    <th>专业</th>
+                    <th style="width:60px;">就业意向</th>
+                    <th style="width:60px;">村干部</th>
+                    <th style="width:72px;">村后备干部</th>
+                    <th style="width:60px;">乡土人才</th>
+                    <th style="width:60px;">创业人才</th>
+                    <th>务工地点</th>
+                    <th style="width:60px;">务工时间</th>
+                    <th style="width:60px;">务工行业</th>
+                    <th style="width:72px;">务工年收入</th>
+                    <th style="width:60px;">务工职务</th>
+                    <th style="width:109px;">联系方式</th>
+                    <th style="width:35px;">残疾</th>
+                    <th style="width:35px;">低保</th>
+                    <th style="width:35px;">农保</th>
+                    <th style="width:35px;">医保</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>张三三</td>
+                    <td>男</td>
+                    <td>1993年12月12日</td>
+                    <td>成都</td>
+                    <td>本科</td>
+                    <td>党员</td>
+                    <td>电子科技大学</td>
+                    <td>软件工程</td>
+                    <td>腾讯</td>
+                    <td>否</td>
+                    <td>否</td>
+                    <td>IT</td>
+                    <td>阿里巴巴</td>
+                    <td>天府软件园天府软件园天府软件园</td>
+                    <td>3年</td>
+                    <td>计算机</td>
+                    <td>100000</td>
+                    <td>程序员</td>
+                    <td>11122233344</td>
+                    <td>否</td>
+                    <td>否</td>
+                    <td>否</td>
+                    <td>否</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>张三</td>
+                    <td>男</td>
+                    <td>1993年12月12日</td>
+                    <td>成都</td>
+                    <td>本科</td>
+                    <td>党员</td>
+                    <td>电子科技大学</td>
+                    <td>软件工程</td>
+                    <td>腾讯</td>
+                    <td>否</td>
+                    <td>否</td>
+                    <td>IT</td>
+                    <td>阿里巴巴</td>
+                    <td>天府软件园</td>
+                    <td>3年</td>
+                    <td>计算机</td>
+                    <td>100000</td>
+                    <td>程序员</td>
+                    <td>11122233344</td>
+                    <td>否</td>
+                    <td>否</td>
+                    <td>否</td>
+                    <td>否</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>张三</td>
+                    <td>男</td>
+                    <td>1993年12月12日</td>
+                    <td>成都</td>
+                    <td>本科</td>
+                    <td>党员</td>
+                    <td>电子科技大学</td>
+                    <td>软件工程</td>
+                    <td>腾讯</td>
+                    <td>否</td>
+                    <td>否</td>
+                    <td>IT</td>
+                    <td>阿里巴巴</td>
+                    <td>天府软件园</td>
+                    <td>3年</td>
+                    <td>计算机</td>
+                    <td>100000</td>
+                    <td>程序员</td>
+                    <td>11122233344</td>
+                    <td>否</td>
+                    <td>否</td>
+                    <td>否</td>
+                    <td>否</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>张三</td>
+                    <td>男</td>
+                    <td>1993年12月12日</td>
+                    <td>成都</td>
+                    <td>本科</td>
+                    <td>党员</td>
+                    <td>电子科技大学</td>
+                    <td>软件工程</td>
+                    <td>腾讯</td>
+                    <td>否</td>
+                    <td>否</td>
+                    <td>IT</td>
+                    <td>阿里巴巴</td>
+                    <td>天府软件园</td>
+                    <td>3年</td>
+                    <td>计算机</td>
+                    <td>100000</td>
+                    <td>程序员</td>
+                    <td>11122233344</td>
+                    <td>否</td>
+                    <td>否</td>
+                    <td>否</td>
+                    <td>否</td>
+                </tr>
+            </table>
+        </div>
+        <div class="page-box">
+            <div id="page" class="box"></div>
+        </div>
+    </div>
+</div>
+
+        <!-- jQuery -->
+        <script src="{% static 'js/jquery.min.js' %}"></script>
+        <!-- jQuery Easing -->
+        <script src="{% static 'js/jquery.easing.1.3.js' %}"></script>
+        <!-- Bootstrap -->
+        <script src="{% static 'js/bootstrap.min.js' %}"></script>
+        <!-- Waypoints -->
+        <script src="{% static 'js/jquery.waypoints.min.js' %}"></script>
+        <!-- Main JS -->
+        <script src="{% static 'js/main.js' %}"></script>
+        <!-- Echarts JS-->
+        <script src="{% static 'js/echarts.common.min.js' %}"></script>
+<script src="{% static 'js/paging.min.js' %}"></script>
+
+        <script type="text/javascript">
+            var setTotalCount = 301;
+            $('#page').paging({
+                initPageNo: 1, // 初始页码
+                totalPages: 10, //总页数
+                totalCount: '合计' + setTotalCount + '条数据', // 条目总数
+                slideSpeed: 600, // 缓动速度。单位毫秒
+                jump: true, //是否支持跳转
+                callback: function(page) { // 回调函数
+                    console.log(page);
+                }
+            })
+        </script>
+</body>
+</html>

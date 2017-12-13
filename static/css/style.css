@@ -1963,7 +1963,7 @@ pre code {
 }
 @media (min-width: 1200px) {
   .container {
-    width: 1190px;
+    width: 100%;
   }
 }
 
@@ -4655,7 +4655,7 @@ tbody.collapse.in {
 
 .navbar {
   position: relative;
-  min-height: 80px;
+  min-height: 50px;
   margin-bottom: 20px;
   border: 1px solid transparent;
 }
@@ -4688,7 +4688,7 @@ tbody.collapse.in {
 .navbar-collapse {
   overflow-x: visible;
   padding-right: 25px;
-  padding-left: 25px;
+  padding-left: 35px;
   border-top: 1px solid transparent;
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
   -webkit-overflow-scrolling: touch;
@@ -4843,6 +4843,7 @@ tbody.collapse.in {
   padding-top: 10px;
   padding-bottom: 10px;
   line-height: 20px;
+  cursor: pointer;
 }
 @media (max-width: 767px) {
   .navbar-nav .open .dropdown-menu {
@@ -4874,8 +4875,8 @@ tbody.collapse.in {
     float: left;
   }
   .navbar-nav > li > a {
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: 15px;
+    padding-bottom: 15px;
   }
 }
 
@@ -7376,7 +7377,7 @@ h1, h2, h3, h4, h5, h6 {
   float: left;
   width: 100%;
   position: relative;
-  z-index: 99;
+  z-index: 1;
   padding-bottom: .5em;
   top: 0;
 }
@@ -7429,6 +7430,8 @@ h1, h2, h3, h4, h5, h6 {
 
 #fh5co-main {
   clear: both;
+  position: relative;
+  z-index: 99;
   /*padding-top: 1em;*/
 }
 
@@ -7442,7 +7445,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .fh5co-intro {
-  padding: 1em 0 3em 0;
+  padding: 0em 0 2em 0;
 }
 @media screen and (max-width: 768px) {
   .fh5co-intro {
@@ -7464,8 +7467,8 @@ h1, h2, h3, h4, h5, h6 {
 
 #fh5co-portfolio {
   margin-bottom: 7em;
-  padding-left: 12em;
-  padding-right: 12em;
+  padding-left: 24em;
+  padding-right: 24em;
   padding-top: 2em;
   padding-bottom: 2em;
   background: #fafafa;
@@ -7477,10 +7480,10 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 4em;
   }
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1400px) {
   #fh5co-portfolio {
-    padding-left: 0em;
-    padding-right: 0em;
+    padding-left: 4em;
+    padding-right: 4em;
   }
 }
 #fh5co-portfolio .fh5co-portfolio-item {
@@ -7559,7 +7562,7 @@ h1, h2, h3, h4, h5, h6 {
 
 #fh5co-team {
   clear: both;
-  padding: 7em 0;
+  /*padding: 7em 0;*/
 }
 @media screen and (max-width: 768px) {
   #fh5co-team {
@@ -8258,4 +8261,141 @@ a > img.fh5co-align-center {
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+.pull-left {
+  float: left;
+}
+.block {
+  overflow: hidden;
+  line-height: 40px;
+  margin-bottom: 10px;
+}
+/* Table Head */
+table thead th {
+  background-color: rgb(81, 130, 187);
+  color: #fff;
+  border-bottom-width: 0;
+}
+
+/* Column Style */
+table td {
+  color: #000;
+}
+/* Heading and Column Style */
+table tr, table th {
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(81, 130, 187);
+}
+
+/* Padding and font style */
+table td, table th {
+  padding: 5px 5px;
+  font-size: 12px;
+  font-family: Verdana;
+  font-weight: bold;
+}
+.filter-box {
+  border:1px solid rgb(81, 130, 187);
+  width:1500px;
+  height:212px;
+}
+.filter {
+  height: 30px;
+  width: 50%;
+  float: left;
+  overflow: hidden;
+}
+.filter:nth-child(even) {
+  border-left: 1px solid rgb(81, 130, 187);
+}
+.filter-left {
+  width: 100px;
+  height: 29px;
+  float: left;
+  background-color: #f3f3f3;
+  color:#000;
+  font-weight: bold;
+  text-align: center;
+  line-height: 29px;
+}
+.filter-right {
+  float: left;
+  height: 30px;
+  line-height: 30px;
+  text-align: left;
+}
+.filter-right input {
+  margin: 0 10px;
+}
+.filter-right label {
+  margin: 0 10px;
+  font-weight: 100;
+  color: #005aa0;
+  cursor: pointer;
+}
+.filter-right label:hover {
+  color: #e4393c;
+}
+.border-bottom {
+  border-bottom: 1px solid #ddd;
+}
+.filter-tags {
+  width: 1500px;
+  padding: 30px 0 ;
+  overflow: hidden;
+  color: #000;
+}
+.filter-tag {
+  padding: 5px;
+  padding-right: 20px;
+  background-color: #f3f3f3;
+  position: relative;
+  border: 1px solid #ddd;
+  margin-right: 10px;
+  color: #999;
+}
+.filter-tag:hover {
+  border: 1px solid #e4393c;
+}
+.hr-box {
+  margin-left:200px;
+  margin-right:200px;
+}
+@media screen and (max-width: 1400px) {
+  .filter-box {
+    width: 1100px;
+  }
+  .filter {
+    width: 548px;
+  }
+  .filter-tags {
+    width: 1100px;
+  }
+  .hr-box {
+    margin-left:100px;
+    margin-right:166px;
+  }
+}
+.icon-close {
+  display: block;
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  right: 1px;
+  top: 1px;
+  cursor: pointer;
+  background: url(../images/close2.png) no-repeat;
+}
+.text-red {
+  color:#e4393c
+}
+.page-box {
+  position: relative;
+  height: 40px;
+  width: 100%;
+  margin-top: 30px;
+}
+.hidden {
+  display: none;
 }

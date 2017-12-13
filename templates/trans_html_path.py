@@ -18,6 +18,7 @@ postfix = ('css', 'js', 'jpg', 'png', 'gif')
 replace = {'.' + p: '.' + p + "'" + ' %}' for p in postfix}
 replace[static_name + '/'] = "{% static '"
 
+# todo ‘hr_info.html’ to '{% url 'hr_info' %}' 等等
 # 获取所有html
 listdir = os.listdir()
 htmls = (f for f in listdir if os.path.isfile(f) and os.path.splitext(f)[-1] == '.html')
