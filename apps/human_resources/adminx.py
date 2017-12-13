@@ -27,8 +27,9 @@ class PersonnelInformationAdmin:
     list_display = ['name', 'group', 'gender', 'birthday', 'permanent_residence', 'home', 'degree_of_education',
                     'political_status', 'school_major_field', 'employment_intention', 'is_village_cadres',
                     'is_village_backup_cadres', 'is_local_talent', 'is_career_creating_talent', 'working_place',
-                    'working_years', 'working_position', 'phone_num', 'health_status', 'is_basic_living_allowances',
-                    'is_rural_social_endowment_insurance', 'is_medical_insurance', 'add_time']
+                    'working_years', 'working_industry', 'working_salary', 'working_position', 'phone_num',
+                    'health_status', 'is_basic_living_allowances', 'is_rural_social_endowment_insurance',
+                    'is_medical_insurance', 'add_time', 'remarks']
 
     list_filter = list_display
     search_fields = ['name', 'group', 'school_major_field', 'working_industry', 'working_position', 'remarks']
