@@ -27,6 +27,18 @@ class EmploymentIntention(models.Model):
         return self.name
 
 
+class WorkingIndustry(models.Model):
+    name = models.CharField(verbose_name='务工行业', max_length=20)
+    add_time = models.DateTimeField(verbose_name='添加时间', default=datetime.now)
+
+    class Meta:
+        verbose_name = '务工行业'
+        verbose_name_plural = verbose_name
+
+    def __str__(self):
+        return self.name
+
+
 class Family(models.Model):
     householder = models.CharField(verbose_name='户主', max_length=20)
     is_poor_households = models.CharField(verbose_name='是否为贫困户', max_length=3, choices=(
@@ -35,10 +47,10 @@ class Family(models.Model):
     per_capita_arable_land_area = models.FloatField(verbose_name='人均耕地面积(亩)', default=0)
     per_capita_woodland_area = models.FloatField(verbose_name='人均林地面积(亩)', default=0)
     per_capita_circulation_area = models.FloatField(verbose_name='人均已流转面积(亩)', default=0)
-    annual_income = models.IntegerField(verbose_name='年收入(元)', default=0)
-    medical_expenditure = models.IntegerField(verbose_name='医疗支出(元)', default=0)
-    education_expenditure = models.IntegerField(verbose_name='教育支出(元)', default=0)
-    living_production_expenditure = models.IntegerField(verbose_name='生活生产支出(元)', default=0)
+    annual_income = models.IntegerField(verbose_name='年收入(万元)', default=0)
+    medical_expenditure = models.IntegerField(verbose_name='医疗支出(万元)', default=0)
+    education_expenditure = models.IntegerField(verbose_name='教育支出(万元)', default=0)
+    living_production_expenditure = models.IntegerField(verbose_name='生活生产支出(万元)', default=0)
     add_time = models.DateTimeField(verbose_name='添加时间', default=datetime.now)
     remarks = models.CharField(verbose_name='备注', max_length=300, null=True, blank=True)
 
@@ -74,12 +86,12 @@ class PersonnelInformation(models.Model):
 
     working_place = models.CharField(verbose_name='务工地点', max_length=30, null=True, blank=True)
     working_years = models.CharField(verbose_name='务工年限', max_length=4, null=True, blank=True, choices=(
-        ('1', '1年以下'), ('1to5', '1-5年'), ('5', '5年以上')), default='1to5')
-    working_industry = models.CharField(verbose_name='务工行业', max_length=30, null=True, blank=True)
+        ('1', '1年以下'), ('1to5', '1-5年(不含)'), ('5', '5年及以上')), default='1to5')
+    working_industry = models.ForeignKey(WorkingIndustry, verbose_name='务工行业', null=True, blank=True)
     working_salary = models.CharField(verbose_name='务工年收入', max_length=5, null=True, blank=True, choices=(
         ('5', '5万以下'), ('5to8', '5-8万'), ('8to12', '8-12万'), ('12', '12万以上')), default='5')
-    working_position = models.CharField(verbose_name='务工职位', max_length=30, null=True, blank=True)
-
+    working_position = models.CharField(verbose_name='务工职位', max_length=30, null=True, blank=True, choices=(
+        ('lb', '老板'), ('zcgb', '中层干部'), ('ybgr', '一般工人'), ('w', '无')), default='wbgr')
     phone_num = models.CharField(verbose_name='联系方式', max_length=11, null=True, blank=True)
     health_status = models.CharField(verbose_name='身体状况', max_length=9, choices=(
         ('jk', '健康'), ('hyjb', '患有疾病'), ('cj', '残疾')), default='jk')

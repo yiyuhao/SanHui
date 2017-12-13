@@ -1,6 +1,6 @@
 import xadmin
 
-from .models import Province, EmploymentIntention, Family, PersonnelInformation
+from .models import Province, EmploymentIntention, Family, PersonnelInformation, WorkingIndustry
 
 
 class ProvinceAdmin:
@@ -10,6 +10,12 @@ class ProvinceAdmin:
 
 
 class EmploymentIntentionAdmin:
+    list_display = ['name', 'add_time']
+    list_filter = list_display
+    search_fields = ['name']
+
+
+class WorkingIndustryAdmin:
     list_display = ['name', 'add_time']
     list_filter = list_display
     search_fields = ['name']
@@ -39,3 +45,4 @@ xadmin.site.register(Province, ProvinceAdmin)
 xadmin.site.register(EmploymentIntention, EmploymentIntentionAdmin)
 xadmin.site.register(Family, FamilyAdmin)
 xadmin.site.register(PersonnelInformation, PersonnelInformationAdmin)
+xadmin.site.register(WorkingIndustry, WorkingIndustryAdmin)
