@@ -19,7 +19,7 @@
     <script>
         $(document).ready(function(c) {
             $('#login_form').on('submit', function (e) {
-                location.href = 'index.html';
+                location.href = "{% url 'index' %}";
                 e.preventDefault();
             })
     });

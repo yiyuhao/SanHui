@@ -17,11 +17,18 @@ from django.conf.urls import url
 from django.contrib import admin
 import xadmin
 
-from front_end.views import IndexView, HrInfoView
+from front_end.views import IndexView, HrInfoView, LoginView, BaseInfoView, IndustryInfoView, InfoView, PartyInfoView, \
+    LiveInfoView
 
 urlpatterns = [
     url(r'^xadmin/', xadmin.site.urls),
     url(r'^$', IndexView.as_view(), name='index'),
 
     url(r'^hr_info/', HrInfoView.as_view(), name='hr_info'),
+    url(r'^login/', LoginView.as_view(), name='login'),
+    url(r'^base_info/', BaseInfoView.as_view(), name='base_info'),
+    url(r'^industry_info/', IndustryInfoView.as_view(), name='industry_info'),
+    url(r'^info/', InfoView.as_view(), name='info'),
+    url(r'^party_info/', PartyInfoView.as_view(), name='party_info'),
+    url(r'^live_info/', LiveInfoView.as_view(), name='live_info'),
 ]

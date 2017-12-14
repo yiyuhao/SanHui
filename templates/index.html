@@ -342,13 +342,13 @@
 <script src="{% static 'js/main.js' %}"></script>
 <script>
     var goPB = function () {
-        window.location.href = 'party_info.html';
+        window.location.href = "{% url 'party_info' %}";
 	};
 	var goPL = function () {
-        window.location.href = 'live_info.html';
+        window.location.href = "{% url 'live_info' %}";
 	};
     var goHR = function () {
-        window.location.href = 'hr_info.html';
+        window.location.href = "{% url 'hr_info' %}";
     };
 </script>
 </body>

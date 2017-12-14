@@ -35,6 +35,7 @@ for html in htmls:
     html_name = html.split('.')[0]
     # {'hr_info.html': "{% url 'hr_info' %}"}
     replace['"{}"'.format(html)] = '\"{% url \'' + html_name + '\' %}\"'
+    replace["'{}'".format(html)] = '\"{% url \'' + html_name + '\' %}\"'
 
 for html in htmls:
     with open(html, 'r', encoding='utf-8') as f:
