@@ -7,6 +7,12 @@
     并在首行加上
         {% load static %}
 
+    转换静态地址
+    如
+        hr_info.html
+        改为
+        {% url 'hr_info' %}
+
 
 """
 import os
@@ -15,13 +21,20 @@ import os
 static_name = 'assets'
 
 postfix = ('css', 'js', 'jpg', 'png', 'gif')
+
+# replace = {'.css': ".css' %"}
 replace = {'.' + p: '.' + p + "'" + ' %}' for p in postfix}
 replace[static_name + '/'] = "{% static '"
 
-# todo ‘hr_info.html’ to '{% url 'hr_info' %}' 等等
 # 获取所有html
 listdir = os.listdir()
-htmls = (f for f in listdir if os.path.isfile(f) and os.path.splitext(f)[-1] == '.html')
+htmls = [f for f in listdir if os.path.isfile(f) and os.path.splitext(f)[-1] == '.html']
+
+# 跳转的静态地址
+for html in htmls:
+    html_name = html.split('.')[0]
+    # {'hr_info.html': "{% url 'hr_info' %}"}
+    replace['"{}"'.format(html)] = '\"{% url \'' + html_name + '\' %}\"'
 
 for html in htmls:
     with open(html, 'r', encoding='utf-8') as f:

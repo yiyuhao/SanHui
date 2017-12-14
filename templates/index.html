@@ -24,7 +24,7 @@
 	<div class="navbar-solid-state">
 		 <!-- Header -->
 		<header id="header" class="alt">
-			<!-- <h1><a href="index.html" class="a-transparent">Solid State</a></h1> -->
+			<!-- <h1><a href="{% url 'index' %}" class="a-transparent">Solid State</a></h1> -->
 			<nav>
 				<a href="#menu" class="a-menu">菜单 <i class="ion-android-menu"></i> </a>
 			</nav>
@@ -35,13 +35,13 @@
 			<div class="inner">
 				<h2>菜单</h2>
 				<ul class="links">
-					<li><a href="index.html">首页</a></li>
+					<li><a href="{% url 'index' %}">首页</a></li>
 					<li><a href="{% url 'hr_info' %}">人力资源</a></li>
-					<li><a href="base_info.html">基础设施</a></li>
-					<li><a href="industry_info.html">产业发展</a></li>
-					<li><a href="live_info.html">扶贫民生</a></li>
-					<li><a href="party_info.html">基层组织</a></li>
-					<li><a href="index.html">地理环境</a></li>
+					<li><a href="{% url 'base_info' %}">基础设施</a></li>
+					<li><a href="{% url 'industry_info' %}">产业发展</a></li>
+					<li><a href="{% url 'live_info' %}">扶贫民生</a></li>
+					<li><a href="{% url 'party_info' %}">基层组织</a></li>
+					<li><a href="{% url 'index' %}">地理环境</a></li>
 				</ul>
 				<a href="#" class="close">Close</a>
 			</div>
@@ -126,7 +126,7 @@
 							<p>
 								（三）房屋数量：土壤土壤
 							</p>
-							<a href="base_info.html" class="btn btn-learn-more">LEARN MORE <i class="ion-ios-arrow-right"></i></a>
+							<a href="{% url 'base_info' %}" class="btn btn-learn-more">LEARN MORE <i class="ion-ios-arrow-right"></i></a>
 						</div>
 					</div>
 				</div>
@@ -149,7 +149,7 @@
 							<p>
 								（二）农业数据：气候气候
 							</p>
-							<a href="industry_info.html" class="btn btn-learn-more">LEARN MORE <i class="ion-ios-arrow-right"></i></a>
+							<a href="{% url 'industry_info' %}" class="btn btn-learn-more">LEARN MORE <i class="ion-ios-arrow-right"></i></a>
 						</div>
 					</div>
 					<div class="col-md-4">
@@ -348,7 +348,7 @@
         window.location.href = 'live_info.html';
 	};
     var goHR = function () {
-        window.location.href = '{% url 'hr_info' %}';
+        window.location.href = 'hr_info.html';
     };
 </script>
 </body>

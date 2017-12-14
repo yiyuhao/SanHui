@@ -58,17 +58,17 @@
 						<!--<div class="navbar-header">-->
 						<!--&lt;!&ndash; Mobile Toggle Menu Button &ndash;&gt;-->
 						<!--<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle visible-xs-block" data-toggle="collapse" data-target="#fh5co-navbar" aria-expanded="false" aria-controls="navbar"><i></i></a>-->
-						<!--<a class="navbar-brand" href="index.html">Clean</a>-->
+						<!--<a class="navbar-brand" href="{% url 'index' %}">Clean</a>-->
 						<!--</div>-->
 						<div id="fh5co-navbar" class="navbar-collapse collapse">
 							<ul class="nav navbar-nav navbar-right">
-								<li><a href="index.html"><span>首页 <span class="border"></span></span></a></li>
-								<li class="active"><a href="base_info.html"><span>基础设施 <span class="border"></span></span></a></li>
-								<li><a href="industry_info.html"><span>产业发展 <span class="border"></span></span></a></li>
-								<li><a href="hr_info.html"><span>人力资源 <span class="border"></span></span></a></li>
-								<li><a href="live_info.html"><span>扶贫民生 <span class="border"></span></span></a></li>
-								<li><a href="party_info.html"><span>基础组织 <span class="border"></span></span></a></li>
-								<li><a href="party_info.html"><span>地理环境 <span class="border"></span></span></a></li>
+								<li><a href="{% url 'index' %}"><span>首页 <span class="border"></span></span></a></li>
+								<li class="active"><a href="{% url 'base_info' %}"><span>基础设施 <span class="border"></span></span></a></li>
+								<li><a href="{% url 'industry_info' %}"><span>产业发展 <span class="border"></span></span></a></li>
+								<li><a href="{% url 'hr_info' %}"><span>人力资源 <span class="border"></span></span></a></li>
+								<li><a href="{% url 'live_info' %}"><span>扶贫民生 <span class="border"></span></span></a></li>
+								<li><a href="{% url 'party_info' %}"><span>基础组织 <span class="border"></span></span></a></li>
+								<li><a href="{% url 'party_info' %}"><span>地理环境 <span class="border"></span></span></a></li>
 							</ul>
 						</div>
 					</div>

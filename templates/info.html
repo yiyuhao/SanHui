@@ -25,14 +25,14 @@
 	<meta name="twitter:url" content="" />
 	<meta name="twitter:card" content="" />
 
-	<!-- Place favicon.ico and apple-touch-icon.png' %}' %}' %}' %}' %}' %} in the root directory -->
+	<!-- Place favicon.ico and apple-touch-icon.png' %}' %}' %}' %}' %}' %}' %}' %} in the root directory -->
 	<link rel="shortcut icon" href="favicon.ico">
 
 	<!-- Google Webfonts -->
 	<!--<link href='http://fonts.useso.com/css?family=Roboto:400,300,100,500' rel='stylesheet' type='text/css'>-->
 	<!--<link href='http://fonts.useso.com/css?family=Roboto+Slab:400,300,100,500' rel='stylesheet' type='text/css'>-->
 	
-	<!-- Animate.css' %}' %}' %}' %}' %}' %} -->
+	<!-- Animate.css' %}' %}' %}' %}' %}' %}' %}' %} -->
 	<link rel="stylesheet" href="{% static 'css/animate.css' %}">
 	<!-- Icomoon Icon Fonts-->
 	<link rel="stylesheet" href="{% static 'css/icomoon.css' %}">
@@ -58,11 +58,11 @@
 						<!--<div class="navbar-header"> -->
 						<!--&lt;!&ndash; Mobile Toggle Menu Button &ndash;&gt;-->
 						<!--<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle visible-xs-block" data-toggle="collapse" data-target="#fh5co-navbar" aria-expanded="false" aria-controls="navbar"><i></i></a>-->
-						<!--<a class="navbar-brand" href="index.html">Clean</a>-->
+						<!--<a class="navbar-brand" href="{% url 'index' %}">Clean</a>-->
 						<!--</div>-->
 						<!--<div id="fh5co-navbar" class="navbar-collapse collapse">-->
 							<!--<ul class="nav navbar-nav navbar-right">-->
-								<!--<li class="active"><a href="index.html"><span>Home <span class="border"></span></span></a></li>-->
+								<!--<li class="active"><a href="{% url 'index' %}"><span>Home <span class="border"></span></span></a></li>-->
 								<!--<li><a href="right-sidebar.html"><span>Right Sidebar <span class="border"></span></span></a></li>-->
 								<!--<li><a href="left-sidebar.html"><span>Left Sidebar <span class="border"></span></span></a></li>-->
 							<!--</ul>-->
