@@ -1,3 +1,7 @@
+import json
+
+from django.core import serializers
+from django.http import HttpResponse
 from django.shortcuts import render
 from django.views.generic.base import View
 
@@ -14,9 +18,11 @@ class HrInfoView(View):
         return render(request, 'hr_info.html', {'all_people': all_people})
 
 
-class RealHrInfoView(View):
-    """人力资源"""
+class AjaxGetHrInfoView(View):
+    """ajax获取人力资源信息"""
 
     def get(self, request):
+        all_people = PersonnelInformation.objects.all()
+        all_people = serializers.serialize('json', all_people)
 
-        return render(request, 'hr_info.html')
+        return HttpResponse(all_people, content_type='application/json')

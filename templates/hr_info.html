@@ -89,14 +89,14 @@
         </div>
     </div>
     <div class="hr-box">
-        <div class="filter-box">
+        <div class="filter-box" id="filter">
 
             <div class="filter border-bottom">
                 <div class="filter-left">
                     组数
                 </div>
                 <div class="filter-right">
-                    <label><input type="radio" name="group" class="hidden">一组</label>
+                    <label><input type="radio" name="group" class="hidden" value="1">一组</label>
                     <label><input type="radio" name="group" class="hidden">二组</label>
                     <label><input type="radio" name="group" class="hidden">三组</label>
                     <label><input type="radio" name="group" class="hidden">四组</label>
@@ -250,19 +250,12 @@
                 筛选条件：
             </div>
             <div class="pull-left filter-tag">
+                <input type="radio" name="gender" value="male" class="hidden">
                 <span>性别：</span><span class="">男</span>
                 <span class="icon-close"></span>
             </div>
             <div class="pull-left filter-tag">
                 <span>年龄：</span><span class="">20岁以下</span>
-                <span class="icon-close"></span>
-            </div>
-            <div class="pull-left filter-tag">
-                <span>常住地：</span><span class="">四川</span>
-                <span class="icon-close"></span>
-            </div>
-            <div class="pull-left filter-tag">
-                <span>社保情况：</span><span class="">医保</span>
                 <span class="icon-close"></span>
             </div>
         </div>
@@ -275,7 +268,7 @@
                     <th style="width:120px;">出生年月</th>
                     <th style="width:50px;">常住地</th>
                     <th style="width:60px;">文化程度</th>
-                    <th style="width:60px;">政治面貌</th>
+                    <th style="width:60px;">政治面貌/th>
                     <th>在读院校和专业</th>
                     <th style="width:60px;">就业意向</th>
                     <th style="width:60px;">村干部及职位</th>
@@ -359,7 +352,55 @@
         callback: function (page) { // 回调函数
             console.log(page);
         }
-    })
+    });
+
+    var tags = {};
+
+    $("div.filter-right label").on('click', function () {
+        // 更新tags数组
+        var key = $(this).children().attr('name');
+        tags[key] = $(this).children().attr('value');
+
+        // todo
+        // 添加标签
+
+        // ajax获取人力资源数据
+        var table_data = get_hr_info(tags);
+
+        // todo
+        // 更新表格
+        update_hr_table(table_data);
+    });
+
+    $(".filter-tag").on('click', function () {
+        // hide tag
+        // ajax get
+        // update table
+    });
+
+    function get_hr_info(params) {
+        $.ajax({
+            cache: false,
+            type: 'GET',
+            url: "/get_hr_info/",
+            data: params,
+            async: true,
+            success: function (data) {
+{#                if (data.status == 'fail') {#}
+{#                    window.location.href = "/hr_info/";#}
+{#                } else if (data.status == 'success') {#}
+{#                    return data#}
+{#                }#}
+                console.log(data);
+                return data
+            }
+        })
+    }
+
+    function update_hr_table(data) {
+        console.log(data)
+    }
+
 </script>
 </body>
 </html>

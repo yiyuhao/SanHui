@@ -64,7 +64,8 @@ class Family(models.Model):
 
 class PersonnelInformation(models.Model):
     name = models.CharField(verbose_name='姓名', max_length=20)
-    group = models.CharField(verbose_name='组数', max_length=4)
+    group = models.CharField(verbose_name='组数', max_length=4, choices=(
+        ('1', '一组'), ('2', '二组'), ('3', '三组'), ('4', '四组'), ('5', '五组'), ('6', '六组'), ('7', '七组')))
     gender = models.CharField(verbose_name='性别', max_length=6, choices=(
         ('male', '男'), ('female', '女')), default='male')
     birthday = models.DateField(verbose_name='出生年月', null=True, blank=True)
@@ -96,7 +97,7 @@ class PersonnelInformation(models.Model):
     health_status = models.CharField(verbose_name='身体状况', max_length=9, choices=(
         ('jk', '健康'), ('hyjb', '患有疾病'), ('cj', '残疾')), default='jk')
     is_basic_living_allowances = models.CharField(verbose_name='最低保障', max_length=3, choices=(
-        ('db', '低保'), ('wb', '五保'), ('w', '无')), default='w')
+        ('db', '低保'), ('w', '无')), default='w')
     is_rural_social_endowment_insurance = models.CharField(verbose_name='是否农保', max_length=3, choices=(
         ('yes', '是'), ('no', '否')), default='yes')
     is_medical_insurance = models.CharField(verbose_name='是否参加医保', max_length=3, choices=(

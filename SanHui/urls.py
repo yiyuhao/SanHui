@@ -19,7 +19,7 @@ import xadmin
 
 from front_end.views import IndexView, LoginView, BaseInfoView, IndustryInfoView, InfoView, PartyInfoView, \
     LiveInfoView
-from human_resources.views import HrInfoView
+from human_resources.views import HrInfoView, AjaxGetHrInfoView
 
 urlpatterns = [
     url(r'^xadmin/', xadmin.site.urls),
@@ -32,4 +32,6 @@ urlpatterns = [
     url(r'^info/', InfoView.as_view(), name='info'),
     url(r'^party_info/', PartyInfoView.as_view(), name='party_info'),
     url(r'^live_info/', LiveInfoView.as_view(), name='live_info'),
+
+    url(r'^get_hr_info/', AjaxGetHrInfoView.as_view(), name='get_hr_info'),
 ]
