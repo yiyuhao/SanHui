@@ -133,3 +133,6 @@ USE_TZ = False
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
+
+# None to ''
+TEMPLATE_STRING_IF_INVALID = 'a'

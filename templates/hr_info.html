@@ -3,15 +3,16 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js"> <!--<![endif]-->
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>三会村-基层组织</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="" />
-    <meta name="keywords" content="" />
-    <meta name="author" content="" />
+    <meta name="description" content=""/>
+    <meta name="keywords" content=""/>
+    <meta name="author" content=""/>
 
     <!-- Facebook and Twitter integration -->
     <meta property="og:title" content=""/>
@@ -19,10 +20,10 @@
     <meta property="og:url" content=""/>
     <meta property="og:site_name" content=""/>
     <meta property="og:description" content=""/>
-    <meta name="twitter:title" content="" />
-    <meta name="twitter:image" content="" />
-    <meta name="twitter:url" content="" />
-    <meta name="twitter:card" content="" />
+    <meta name="twitter:title" content=""/>
+    <meta name="twitter:image" content=""/>
+    <meta name="twitter:url" content=""/>
+    <meta name="twitter:card" content=""/>
 
     <!-- Place favicon.ico and apple-touch-icon.png' %} in the root directory -->
     <link rel="shortcut icon" href="favicon.ico">
@@ -62,8 +63,10 @@
                         <ul class="nav navbar-nav navbar-right">
                             <li><a href="{% url 'index' %}"><span>首页 <span class="border"></span></span></a></li>
                             <li><a href="{% url 'base_info' %}"><span>基础设施 <span class="border"></span></span></a></li>
-                            <li><a href="{% url 'industry_info' %}"><span>产业发展 <span class="border"></span></span></a></li>
-                            <li class="active"><a href="{% url 'hr_info' %}"><span>人力资源 <span class="border"></span></span></a></li>
+                            <li><a href="{% url 'industry_info' %}"><span>产业发展 <span class="border"></span></span></a>
+                            </li>
+                            <li class="active"><a href="{% url 'hr_info' %}"><span>人力资源 <span
+                                    class="border"></span></span></a></li>
                             <li><a href="{% url 'live_info' %}"><span>扶贫民生 <span class="border"></span></span></a></li>
                             <li><a href="{% url 'party_info' %}"><span>基础组织 <span class="border"></span></span></a></li>
                             <li><a href="{% url 'party_info' %}"><span>地理环境 <span class="border"></span></span></a></li>
@@ -273,128 +276,56 @@
                     <th style="width:50px;">常住地</th>
                     <th style="width:60px;">文化程度</th>
                     <th style="width:60px;">政治面貌</th>
-                    <th>在读院校</th>
-                    <th>专业</th>
+                    <th>在读院校和专业</th>
                     <th style="width:60px;">就业意向</th>
-                    <th style="width:60px;">村干部</th>
+                    <th style="width:60px;">村干部及职位</th>
                     <th style="width:72px;">村后备干部</th>
                     <th style="width:60px;">乡土人才</th>
                     <th style="width:60px;">创业人才</th>
                     <th>务工地点</th>
-                    <th style="width:60px;">务工时间</th>
+                    <th style="width:60px;">务工年限</th>
                     <th style="width:60px;">务工行业</th>
                     <th style="width:72px;">务工年收入</th>
                     <th style="width:60px;">务工职务</th>
                     <th style="width:109px;">联系方式</th>
-                    <th style="width:35px;">残疾</th>
+                    <th style="width:35px;">身体状况</th>
                     <th style="width:35px;">低保</th>
                     <th style="width:35px;">农保</th>
                     <th style="width:35px;">医保</th>
+                    <th style="width:35px;">社保</th>
+                    <th style="width:35px;">备注</th>
+
                 </tr>
-                <tr>
-                    <td>1</td>
-                    <td>张三三</td>
-                    <td>男</td>
-                    <td>1993年12月12日</td>
-                    <td>成都</td>
-                    <td>本科</td>
-                    <td>党员</td>
-                    <td>电子科技大学</td>
-                    <td>软件工程</td>
-                    <td>腾讯</td>
-                    <td>否</td>
-                    <td>否</td>
-                    <td>IT</td>
-                    <td>阿里巴巴</td>
-                    <td>天府软件园天府软件园天府软件园</td>
-                    <td>3年</td>
-                    <td>计算机</td>
-                    <td>100000</td>
-                    <td>程序员</td>
-                    <td>11122233344</td>
-                    <td>否</td>
-                    <td>否</td>
-                    <td>否</td>
-                    <td>否</td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>张三</td>
-                    <td>男</td>
-                    <td>1993年12月12日</td>
-                    <td>成都</td>
-                    <td>本科</td>
-                    <td>党员</td>
-                    <td>电子科技大学</td>
-                    <td>软件工程</td>
-                    <td>腾讯</td>
-                    <td>否</td>
-                    <td>否</td>
-                    <td>IT</td>
-                    <td>阿里巴巴</td>
-                    <td>天府软件园</td>
-                    <td>3年</td>
-                    <td>计算机</td>
-                    <td>100000</td>
-                    <td>程序员</td>
-                    <td>11122233344</td>
-                    <td>否</td>
-                    <td>否</td>
-                    <td>否</td>
-                    <td>否</td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>张三</td>
-                    <td>男</td>
-                    <td>1993年12月12日</td>
-                    <td>成都</td>
-                    <td>本科</td>
-                    <td>党员</td>
-                    <td>电子科技大学</td>
-                    <td>软件工程</td>
-                    <td>腾讯</td>
-                    <td>否</td>
-                    <td>否</td>
-                    <td>IT</td>
-                    <td>阿里巴巴</td>
-                    <td>天府软件园</td>
-                    <td>3年</td>
-                    <td>计算机</td>
-                    <td>100000</td>
-                    <td>程序员</td>
-                    <td>11122233344</td>
-                    <td>否</td>
-                    <td>否</td>
-                    <td>否</td>
-                    <td>否</td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>张三</td>
-                    <td>男</td>
-                    <td>1993年12月12日</td>
-                    <td>成都</td>
-                    <td>本科</td>
-                    <td>党员</td>
-                    <td>电子科技大学</td>
-                    <td>软件工程</td>
-                    <td>腾讯</td>
-                    <td>否</td>
-                    <td>否</td>
-                    <td>IT</td>
-                    <td>阿里巴巴</td>
-                    <td>天府软件园</td>
-                    <td>3年</td>
-                    <td>计算机</td>
-                    <td>100000</td>
-                    <td>程序员</td>
-                    <td>11122233344</td>
-                    <td>否</td>
-                    <td>否</td>
-                    <td>否</td>
-                    <td>否</td>
-                </tr>
+                {% for person in all_people %}
+                    <tr>
+                        <td>{{ person.group|default_if_none:'' }}</td>
+                        <td>{{ person.name|default_if_none:'' }}</td>
+                        <td>{{ person.get_gender_display|default_if_none:'' }}</td>
+                        <td>{{ person.birthday|default_if_none:'' }}</td>
+                        <td>{{ person.permanent_residence|default_if_none:'' }}</td>
+                        <td>{{ person.get_degree_of_education_display|default_if_none:'' }}</td>
+                        <td>{{ person.get_political_status_display|default_if_none:'' }}</td>
+                        <td>{{ person.school_major_field|default_if_none:'' }}</td>
+                        <td>{{ person.employment_intention|default_if_none:'' }}</td>
+                        <td>{{ person.is_village_cadres|default_if_none:'' }}</td>
+                        <td>{{ person.get_is_village_backup_cadres_display|default_if_none:'' }}</td>
+                        <td>{{ person.is_local_talent|default_if_none:'' }}</td>
+                        <td>{{ person.is_career_creating_talent|default_if_none:'' }}</td>
+                        <td>{{ person.working_place|default_if_none:'' }}</td>
+                        <td>{{ person.get_working_years_display|default_if_none:'' }}</td>
+                        <td>{{ person.working_industry|default_if_none:'' }}</td>
+                        <td>{{ person.get_working_salary_display|default_if_none:'' }}</td>
+                        <td>{{ person.get_working_position_display|default_if_none:'' }}</td>
+                        <td>{{ person.phone_num|default_if_none:'' }}</td>
+                        <td>{{ person.get_health_status_display|default_if_none:'' }}</td>
+                        <td>{{ person.get_is_basic_living_allowances_display }}</td>
+                        <td>{{ person.get_is_rural_social_endowment_insurance_display }}</td>
+                        <td>{{ person.get_is_medical_insurance_display }}</td>
+                        <td>{{ person.get_is_social_security_display }}</td>
+                        <td>{{ person.remarks|default_if_none:'' }}</td>
+                    </tr>
+                {% endfor %}
+
             </table>
         </div>
         <div class="page-box">
@@ -403,32 +334,32 @@
     </div>
 </div>
 
-        <!-- jQuery -->
-        <script src="{% static 'js/jquery.min.js' %}"></script>
-        <!-- jQuery Easing -->
-        <script src="{% static 'js/jquery.easing.1.3.js' %}"></script>
-        <!-- Bootstrap -->
-        <script src="{% static 'js/bootstrap.min.js' %}"></script>
-        <!-- Waypoints -->
-        <script src="{% static 'js/jquery.waypoints.min.js' %}"></script>
-        <!-- Main JS -->
-        <script src="{% static 'js/main.js' %}"></script>
-        <!-- Echarts JS-->
-        <script src="{% static 'js/echarts.common.min.js' %}"></script>
+<!-- jQuery -->
+<script src="{% static 'js/jquery.min.js' %}"></script>
+<!-- jQuery Easing -->
+<script src="{% static 'js/jquery.easing.1.3.js' %}"></script>
+<!-- Bootstrap -->
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+<!-- Waypoints -->
+<script src="{% static 'js/jquery.waypoints.min.js' %}"></script>
+<!-- Main JS -->
+<script src="{% static 'js/main.js' %}"></script>
+<!-- Echarts JS-->
+<script src="{% static 'js/echarts.common.min.js' %}"></script>
 <script src="{% static 'js/paging.min.js' %}"></script>
 
-        <script type="text/javascript">
-            var setTotalCount = 301;
-            $('#page').paging({
-                initPageNo: 1, // 初始页码
-                totalPages: 10, //总页数
-                totalCount: '合计' + setTotalCount + '条数据', // 条目总数
-                slideSpeed: 600, // 缓动速度。单位毫秒
-                jump: true, //是否支持跳转
-                callback: function(page) { // 回调函数
-                    console.log(page);
-                }
-            })
-        </script>
+<script type="text/javascript">
+    var setTotalCount = 301;
+    $('#page').paging({
+        initPageNo: 1, // 初始页码
+        totalPages: 10, //总页数
+        totalCount: '合计' + setTotalCount + '条数据', // 条目总数
+        slideSpeed: 600, // 缓动速度。单位毫秒
+        jump: true, //是否支持跳转
+        callback: function (page) { // 回调函数
+            console.log(page);
+        }
+    })
+</script>
 </body>
 </html>
