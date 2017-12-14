@@ -17,8 +17,9 @@ from django.conf.urls import url
 from django.contrib import admin
 import xadmin
 
-from front_end.views import IndexView, HrInfoView, LoginView, BaseInfoView, IndustryInfoView, InfoView, PartyInfoView, \
+from front_end.views import IndexView, LoginView, BaseInfoView, IndustryInfoView, InfoView, PartyInfoView, \
     LiveInfoView
+from human_resources.views import HrInfoView
 
 urlpatterns = [
     url(r'^xadmin/', xadmin.site.urls),

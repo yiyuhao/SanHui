@@ -9,13 +9,6 @@ class BaseInfoView(View):
         return render(request, 'base_info.html')
 
 
-class HrInfoView(View):
-    """人力资源"""
-
-    def get(self, request):
-        return render(request, 'hr_info.html')
-
-
 class IndexView(View):
     """首页"""
 
