@@ -1,5 +1,6 @@
 import json
 
+from django.apps import apps
 from django.core import serializers
 from django.http import HttpResponse
 from django.shortcuts import render
@@ -17,7 +18,35 @@ class HrInfoView(View):
         # 所有人员信息
         all_people = PersonnelInformation.objects.all()
 
-        return render(request, 'hr_info.html', {'all_people': all_people})
+        # 获取所有筛选标签
+        # [
+        #     ['group', '组数', (('1', '一组'),
+        #                        ('2', '二组'), ...)],
+        #     ['gender', '性别', (('male', '男'),
+        #                         ('female', '女'))],
+        #     ...
+        # ]
+        filter_fields = []
+        model_fields = apps.get_model('human_resources', 'PersonnelInformation')._meta.fields
+        for field in model_fields:
+            key, key_cn, choices = field.attname, field._verbose_name, field.choices
+            if choices:
+                pass
+            elif key_cn == '常住地':
+                obj = Province.objects.all()
+                choices = tuple([(o.filter_name, o.name) for o in obj])
+            elif key_cn == '就业意向':
+                obj = EmploymentIntention.objects.all()
+                choices = tuple([(o.filter_name, o.name) for o in obj])
+            elif key_cn == '务工行业':
+                obj = WorkingIndustry.objects.all()
+                choices = tuple([(o.filter_name, o.name) for o in obj])
+            else:
+                continue
+            filter_fields.append((key, key_cn, choices))
+
+        return render(request, 'hr_info.html', {'all_people': all_people,
+                                                'filter_fields': filter_fields})
 
 
 class AjaxGetHrInfoView(View):

@@ -4,19 +4,19 @@ from .models import Province, EmploymentIntention, Family, PersonnelInformation,
 
 
 class ProvinceAdmin:
-    list_display = ['name', 'add_time']
+    list_display = ['filter_name', 'name', 'add_time']
     list_filter = list_display
     search_fields = ['name']
 
 
 class EmploymentIntentionAdmin:
-    list_display = ['name', 'add_time']
+    list_display = ['filter_name', 'name', 'add_time']
     list_filter = list_display
     search_fields = ['name']
 
 
 class WorkingIndustryAdmin:
-    list_display = ['name', 'add_time']
+    list_display = ['filter_name', 'name', 'add_time']
     list_filter = list_display
     search_fields = ['name']
 

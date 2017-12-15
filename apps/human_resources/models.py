@@ -4,11 +4,12 @@ from django.db import models
 
 
 class Province(models.Model):
-    name = models.CharField(verbose_name='省份(直辖市)', max_length=20)
+    filter_name = models.CharField(verbose_name='英文缩写(用于筛选)', max_length=20)
+    name = models.CharField(verbose_name='常住地', max_length=20)
     add_time = models.DateTimeField(verbose_name='添加时间', default=datetime.now)
 
     class Meta:
-        verbose_name = '省份(城市)'
+        verbose_name = '常住地'
         verbose_name_plural = verbose_name
 
     def __str__(self):
@@ -16,6 +17,7 @@ class Province(models.Model):
 
 
 class EmploymentIntention(models.Model):
+    filter_name = models.CharField(verbose_name='英文缩写(用于筛选)', max_length=20)
     name = models.CharField(verbose_name='专业方向', max_length=20)
     add_time = models.DateTimeField(verbose_name='添加时间', default=datetime.now)
 
@@ -28,6 +30,7 @@ class EmploymentIntention(models.Model):
 
 
 class WorkingIndustry(models.Model):
+    filter_name = models.CharField(verbose_name='英文缩写(用于筛选)', max_length=20)
     name = models.CharField(verbose_name='务工行业', max_length=20)
     add_time = models.DateTimeField(verbose_name='添加时间', default=datetime.now)
 
