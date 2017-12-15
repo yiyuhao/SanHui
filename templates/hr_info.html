@@ -220,6 +220,7 @@
                 event.stopPropagation();
             })
         }
+
         // <div class="filter border-bottom">
         //     <div class="filter-left">
         //         组数
@@ -234,7 +235,6 @@
         var value = input.attr('value');
         var key_cn = $(this).parent().prev().text();
         var value_cn = $(this).text();
-
         // 判断是添加修改或者删除标签
         var action = 'add';
         if (tags[key]) {
@@ -245,9 +245,11 @@
                 action = 'modify'
             }
         }
-
         // 更新tags数组
         tags[key] = value;
+        if (action == 'delete') {
+            delete tags[key]
+        }
 
         // 更新标签
         update_tags(action, key, value, key_cn, value_cn);
@@ -258,10 +260,16 @@
     });
 
     $(document).on('click', '.filter-tag', function () {
-        // hide tag
-        $(this).remove()
-        // ajax get
-        // update table
+        // 更新tags数组
+        var key = $(this).children().first().attr('name');
+        delete tags[key];
+
+        // 删除标签
+        $(this).remove();
+
+        console.log(tags);
+        // ajax获取人力资源数据, 并更新表格
+        get_hr_info(tags);
     });
 
     // 添加 修改 或删除标签
