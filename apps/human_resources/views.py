@@ -1,14 +1,15 @@
 import json
 
 from django.apps import apps
-from django.core import serializers
 from django.http import HttpResponse
 from django.shortcuts import render
 from django.views.generic.base import View
+from pure_pagination import Paginator, PageNotAnInteger
 
 from .models import Province, EmploymentIntention, WorkingIndustry, Family, PersonnelInformation
 from .adminx import PersonnelInformationAdmin
 from utils.json import model_to_json
+from SanHui.settings import PAGINATION_SETTINGS
 
 
 class HrInfoView(View):
@@ -17,6 +18,18 @@ class HrInfoView(View):
     def get(self, request):
         # 所有人员信息
         all_people = PersonnelInformation.objects.all()
+
+        # 数量
+        num_of_personnel = all_people.count()
+
+        # 取第一页
+        per_page = PAGINATION_SETTINGS.get('PER_PAGE', 10)
+        paginator = Paginator(all_people, per_page, request=request)
+        p = paginator.page(1)
+        all_people = p.object_list
+
+        # 需要返回给前端总页数
+        pages_num = paginator.num_pages
 
         # 获取所有筛选标签
         # [
@@ -46,7 +59,9 @@ class HrInfoView(View):
             filter_fields.append((key, key_cn, choices))
 
         return render(request, 'hr_info.html', {'all_people': all_people,
-                                                'filter_fields': filter_fields})
+                                                'filter_fields': filter_fields,
+                                                'pages_num': pages_num,
+                                                'num_of_personnel': num_of_personnel,})
 
 
 class AjaxGetHrInfoView(View):
@@ -64,8 +79,22 @@ class AjaxGetHrInfoView(View):
                     k = k[:-3] + '__filter_name__exact'
                 filter_params[k] = v
 
+        # 页数
+        page = filter_params.pop('page', 1)
+
         # 后台筛选
         all_people = all_people.filter(**filter_params)
+
+        # 分页
+        per_page = PAGINATION_SETTINGS.get('PER_PAGE', 10)
+        paginator = Paginator(all_people, per_page, request=request)
+        try:
+            page = int(page)
+        except PageNotAnInteger:
+            page = 1
+        # 人力资源列表进行分页
+        people_paginator = paginator.page(page)
+        all_people = people_paginator.object_list
 
         all_people_json = model_to_json(all_people, PersonnelInformationAdmin.list_display)
 

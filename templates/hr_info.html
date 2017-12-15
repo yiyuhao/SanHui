@@ -197,19 +197,22 @@
 <script src="{% static 'js/paging.min.js' %}"></script>
 
 <script type="text/javascript">
-    var setTotalCount = 301;
+    var tags = {};
+
+    var setTotalCount = {{ num_of_personnel }};
     $('#page').paging({
         initPageNo: 1, // 初始页码
-        totalPages: 10, //总页数
+        totalPages: {{ pages_num }}, //总页数
         totalCount: '合计' + setTotalCount + '条数据', // 条目总数
         slideSpeed: 600, // 缓动速度。单位毫秒
         jump: true, //是否支持跳转
         callback: function (page) { // 回调函数
             console.log(page);
+            tags['page'] = page;
+            // ajax获取人力资源数据, 并更新表格
+            get_hr_info(tags);
         }
     });
-
-    var tags = {};
 
     // 筛选标签点击事件
     $("div.filter-right label").on('click', function (event) {
@@ -238,7 +241,7 @@
         // 判断是添加修改或者删除标签
         var action = 'add';
         if (tags[key]) {
-            //标签重复
+            // 有同类标签
             if (tags[key] == value) {
                 action = 'delete'
             } else {
@@ -254,7 +257,6 @@
         // 更新标签
         update_tags(action, key, value, key_cn, value_cn);
 
-        console.log(tags);
         // ajax获取人力资源数据, 并更新表格
         get_hr_info(tags);
     });
@@ -267,7 +269,6 @@
         // 删除标签
         $(this).remove();
 
-        console.log(tags);
         // ajax获取人力资源数据, 并更新表格
         get_hr_info(tags);
     });
