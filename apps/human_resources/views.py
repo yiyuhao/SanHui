@@ -54,6 +54,19 @@ class AjaxGetHrInfoView(View):
 
     def get(self, request):
         all_people = PersonnelInformation.objects.all()
+
+        # 筛选参数及值
+        filter_params = {}
+        for k, v in request.GET.items():
+            if not k.startswith('_'):
+                # 处理外键如working_industry_id  改为查询working_industry__filter_name__exact
+                if k[-3:] == '_id':
+                    k = k[:-3] + '__filter_name__exact'
+                filter_params[k] = v
+
+        # 后台筛选
+        all_people = all_people.filter(**filter_params)
+
         all_people_json = model_to_json(all_people, PersonnelInformationAdmin.list_display)
 
         return HttpResponse(all_people_json, content_type='application/json')

@@ -18,11 +18,11 @@ class Province(models.Model):
 
 class EmploymentIntention(models.Model):
     filter_name = models.CharField(verbose_name='英文缩写(用于筛选)', max_length=20)
-    name = models.CharField(verbose_name='专业方向', max_length=20)
+    name = models.CharField(verbose_name='就业意向', max_length=20)
     add_time = models.DateTimeField(verbose_name='添加时间', default=datetime.now)
 
     class Meta:
-        verbose_name = '专业方向'
+        verbose_name = '就业意向'
         verbose_name_plural = verbose_name
 
     def __str__(self):
