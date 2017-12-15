@@ -91,173 +91,29 @@
     <div class="hr-box">
         <div class="filter-box" id="filter">
 
-            <div class="filter border-bottom">
-                <div class="filter-left">
-                    组数
+            {% for filter_field in filter_fields %}
+                <div class="filter border-bottom">
+                    <div class="filter-left">
+                        {{ filter_field.1 }}
+                    </div>
+                    <div class="filter-right">
+                        {% for options in filter_field.2 %}
+                            <label><input type="radio" name="{{ filter_field.0 }}" class="hidden" value="{{ options.0 }}">{{ options.1 }}</label>
+                        {% endfor %}
+                    </div>
                 </div>
-                <div class="filter-right">
-                    <label><input type="radio" name="group" class="hidden" value="1">一组</label>
-                    <label><input type="radio" name="group" class="hidden">二组</label>
-                    <label><input type="radio" name="group" class="hidden">三组</label>
-                    <label><input type="radio" name="group" class="hidden">四组</label>
-                    <label><input type="radio" name="group" class="hidden">五组</label>
-                    <label><input type="radio" name="group" class="hidden">六组</label>
-                    <label><input type="radio" name="group" class="hidden">七组</label>
-                </div>
-            </div>
-            <div class="filter border-bottom">
-                <div class="filter-left">
-                    性别
-                </div>
-                <div class="filter-right">
-                    <label><input type="radio" name="sex" class="hidden">男</label>
-                    <label><input type="radio" name="sex" class="hidden">女</label>
-                </div>
-            </div>
-            <div class="filter border-bottom">
-                <div class="filter-left">
-                    年龄
-                </div>
-                <div class="filter-right">
-                    <label><input type="radio" name="age" class="hidden">20岁以下</label>
-                    <label><input type="radio" name="age" class="hidden">20-40岁</label>
-                    <label><input type="radio" name="age" class="hidden">40-70岁</label>
-                    <label><input type="radio" name="age" class="hidden">70岁以上</label>
-                </div>
-            </div>
-            <div class="filter border-bottom">
-                <div class="filter-left">
-                    常住地
-                </div>
-                <div class="filter-right">
-                    <label><input type="radio" name="address" class="hidden">本地</label>
-                    <label><input type="radio" name="address" class="hidden">四川</label>
-                    <label><input type="radio" name="address" class="hidden">浙江</label>
-                    <label><input type="radio" name="address" class="hidden">广东</label>
-                    <label><input type="radio" name="address" class="hidden">上海</label>
-                    <label><input type="radio" name="address" class="hidden">北京</label>
-                    <label><input type="radio" name="address" class="hidden">其他</label>
-                </div>
-            </div>
-            <div class="filter border-bottom">
-                <div class="filter-left">
-                    文化程度
-                </div>
-                <div class="filter-right">
-                    <label><input type="radio" name="education" class="hidden">初中及以下</label>
-                    <label><input type="radio" name="education" class="hidden">大专</label>
-                    <label><input type="radio" name="education" class="hidden">本科</label>
-                    <label><input type="radio" name="education" class="hidden">研究生</label>
-                </div>
-            </div>
-            <div class="filter border-bottom">
-                <div class="filter-left">
-                    村职务
-                </div>
-                <div class="filter-right">
-                    <label><input type="radio" name="post" class="hidden">村干部</label>
-                    <label><input type="radio" name="post" class="hidden">村后备干部</label>
-                </div>
-            </div>
-            <div class="filter border-bottom">
-                <div class="filter-left">
-                    就业方向
-                </div>
-                <div class="filter-right">
-                    <label><input type="radio" name="job" class="hidden">行政</label>
-                    <label><input type="radio" name="job" class="hidden">建筑</label>
-                    <label><input type="radio" name="job" class="hidden">种养殖</label>
-                    <label><input type="radio" name="job" class="hidden">餐饮服务</label>
-                    <label><input type="radio" name="job" class="hidden">经商</label>
-                    <label><input type="radio" name="job" class="hidden">其他</label>
-                </div>
-            </div>
-            <div class="filter border-bottom">
-                <div class="filter-left">
-                    人才信息
-                </div>
-                <div class="filter-right">
-                    <label><input type="radio" name="ability" class="hidden">技能人才</label>
-                    <label><input type="radio" name="ability" class="hidden">返乡人才</label>
-                </div>
-            </div>
-            <div class="filter border-bottom">
-                <div class="filter-left">
-                    劳动信息
-                </div>
-                <div class="filter-right">
-                    <label><input type="radio" name="work" class="hidden">外出务工</label>
-                    <label><input type="radio" name="work" class="hidden">本地劳动</label>
-                </div>
-            </div>
-            <div class="filter border-bottom">
-                <div class="filter-left">
-                    务工年限
-                </div>
-                <div class="filter-right">
-                    <label><input type="radio" name="year" class="hidden">一年以下</label>
-                    <label><input type="radio" name="year" class="hidden">1-5年</label>
-                    <label><input type="radio" name="year" class="hidden">5年以上</label>
-                </div>
-            </div>
-            <div class="filter border-bottom">
-                <div class="filter-left">
-                    务工收入
-                </div>
-                <div class="filter-right">
-                    <label><input type="radio" name="income" class="hidden">5万以下</label>
-                    <label><input type="radio" name="income" class="hidden">5-8万</label>
-                    <label><input type="radio" name="income" class="hidden">8-12万</label>
-                    <label><input type="radio" name="income" class="hidden">12万以上</label>
-                </div>
-            </div>
-            <div class="filter border-bottom">
-                <div class="filter-left">
-                    务工职务
-                </div>
-                <div class="filter-right">
-                    <label><input type="radio" name="business" class="hidden">建筑</label>
-                    <label><input type="radio" name="business" class="hidden">种养殖</label>
-                    <label><input type="radio" name="business" class="hidden">餐饮服务</label>
-                    <label><input type="radio" name="business" class="hidden">经商</label>
-                    <label><input type="radio" name="business" class="hidden">其他</label>
-                </div>
-            </div>
-            <div class="filter border-bottom">
-                <div class="filter-left">
-                    身体状况
-                </div>
-                <div class="filter-right">
-                    <label><input type="radio" name="body" class="hidden">健康</label>
-                    <label><input type="radio" name="body" class="hidden">残疾</label>
-                    <label><input type="radio" name="body" class="hidden">患有疾病</label>
-                </div>
-            </div>
-            <div class="filter border-bottom">
-                <div class="filter-left">
-                    社保情况
-                </div>
-                <div class="filter-right">
-                    <label><input type="radio" name="security" class="hidden">医保</label>
-                    <label><input type="radio" name="security" class="hidden">社保</label>
-                    <label><input type="radio" name="security" class="hidden">低保</label>
-                    <label><input type="radio" name="security" class="hidden">养老保险</label>
-                </div>
-            </div>
+            {% endfor %}
+
         </div>
         <div class="filter-tags">
             <div class="pull-left" style="margin-top:5px;">
                 筛选条件：
             </div>
-            <div class="pull-left filter-tag">
-                <input type="radio" name="gender" value="male" class="hidden">
-                <span>性别：</span><span class="">男</span>
-                <span class="icon-close"></span>
-            </div>
-            <div class="pull-left filter-tag">
-                <span>年龄：</span><span class="">20岁以下</span>
-                <span class="icon-close"></span>
-            </div>
+{#            <div class="pull-left filter-tag">#}
+{#                <input type="radio" name="gender" value="male" class="hidden">#}
+{#                <span>性别：</span><span class="">男</span>#}
+{#                <span class="icon-close"></span>#}
+{#            </div>#}
         </div>
         <div style="overflow-x: auto;overflow-y: hidden">
             <table id='hr_table' style="width:1500px;margin:0 auto;table-layout:fixed;overflow: hidden">
@@ -290,7 +146,7 @@
                 </tr>
                 {% for person in all_people %}
                     <tr class="hr_data">
-                        <td>{{ person.group|default_if_none:'' }}</td>
+                        <td>{{ person.get_group_display|default_if_none:'' }}</td>
                         <td>{{ person.name|default_if_none:'' }}</td>
                         <td>{{ person.get_gender_display|default_if_none:'' }}</td>
                         <td>{{ person.birthday|default_if_none:'' }}</td>
@@ -396,6 +252,7 @@
         // 更新标签
         update_tags(action, key, value, key_cn, value_cn);
 
+        console.log(tags);
         // ajax获取人力资源数据, 并更新表格
         get_hr_info(tags);
     });
@@ -435,6 +292,7 @@
         }
     }
 
+    // ajax获取data
     function get_hr_info(params) {
         $.ajax({
             cache: false,
