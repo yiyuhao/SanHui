@@ -1,10 +1,10 @@
 import json
 
 from django.apps import apps
+from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 from django.http import HttpResponse
 from django.shortcuts import render
 from django.views.generic.base import View
-from pure_pagination import Paginator, PageNotAnInteger
 
 from .models import Province, EmploymentIntention, WorkingIndustry, Family, PersonnelInformation
 from .adminx import PersonnelInformationAdmin
@@ -24,8 +24,9 @@ class HrInfoView(View):
 
         # 取第一页
         per_page = PAGINATION_SETTINGS.get('PER_PAGE', 10)
-        paginator = Paginator(all_people, per_page, request=request)
+        paginator = Paginator(all_people, per_page)
         p = paginator.page(1)
+
         all_people = p.object_list
 
         # 需要返回给前端总页数
@@ -87,14 +88,16 @@ class AjaxGetHrInfoView(View):
 
         # 分页
         per_page = PAGINATION_SETTINGS.get('PER_PAGE', 10)
-        paginator = Paginator(all_people, per_page, request=request)
+        paginator = Paginator(all_people, per_page)
         try:
-            page = int(page)
+            p = paginator.page(page)
         except PageNotAnInteger:
-            page = 1
+            p = paginator.page(1)
+        except EmptyPage:
+            p = paginator.page(paginator.num_pages)
+            p.object_list = []
         # 人力资源列表进行分页
-        people_paginator = paginator.page(page)
-        all_people = people_paginator.object_list
+        all_people = p.object_list
 
         all_people_json = model_to_json(all_people, PersonnelInformationAdmin.list_display)
 
