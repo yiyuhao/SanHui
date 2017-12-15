@@ -39,7 +39,7 @@ COPY supervisor-app.conf /etc/supervisor/conf.d/
 # 安装项目所需python第三方库
 
 COPY requirements.txt /home/docker/code/SanHui/
-RUN pip install -i https://pypi.doubanio.com/simple/ -r /home/docker/code/SanHui/requirements.txt
+RUN pip3 install -i https://pypi.doubanio.com/simple/ -r /home/docker/code/SanHui/requirements.txt
 
 
 # uwsgi.ini 及 uwsgi_params
