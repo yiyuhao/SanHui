@@ -260,7 +260,7 @@
             </div>
         </div>
         <div style="overflow-x: auto;overflow-y: hidden">
-            <table style="width:1500px;margin:0 auto;table-layout:fixed;overflow: hidden">
+            <table id='hr_table' style="width:1500px;margin:0 auto;table-layout:fixed;overflow: hidden">
                 <tr>
                     <th style="width:35px;">组数</th>
                     <th style="width:50px;">姓名</th>
@@ -287,10 +287,9 @@
                     <th style="width:35px;">医保</th>
                     <th style="width:35px;">社保</th>
                     <th style="width:35px;">备注</th>
-
                 </tr>
                 {% for person in all_people %}
-                    <tr>
+                    <tr class="hr_data">
                         <td>{{ person.group|default_if_none:'' }}</td>
                         <td>{{ person.name|default_if_none:'' }}</td>
                         <td>{{ person.get_gender_display|default_if_none:'' }}</td>
@@ -357,6 +356,7 @@
     var tags = {};
 
     $("div.filter-right label").on('click', function () {
+        console.log('click');
         // 更新tags数组
         var key = $(this).children().attr('name');
         tags[key] = $(this).children().attr('value');
@@ -365,11 +365,7 @@
         // 添加标签
 
         // ajax获取人力资源数据
-        var table_data = get_hr_info(tags);
-
-        // todo
-        // 更新表格
-        update_hr_table(table_data);
+        get_hr_info(tags);
     });
 
     $(".filter-tag").on('click', function () {
@@ -386,19 +382,40 @@
             data: params,
             async: true,
             success: function (data) {
-{#                if (data.status == 'fail') {#}
-{#                    window.location.href = "/hr_info/";#}
-{#                } else if (data.status == 'success') {#}
-{#                    return data#}
-{#                }#}
-                console.log(data);
-                return data
+                update_hr_table(data);
             }
-        })
+        });
     }
 
+    // 更新表格
     function update_hr_table(data) {
-        console.log(data)
+        var table = $('#hr_table');
+
+        // 清空表
+        $('tr').remove('.hr_data');
+
+        // 依次添加数据
+        for (i in data) {
+            var person = data[i];
+            var row = table_row_html(person);
+            table.append(row)
+        }
+    }
+
+    // 生成一行表格html代码
+    function table_row_html(person) {
+        var tr = $('<tr class="hr_data"></tr>');
+        var fields = ['group', 'name', 'gender', 'birthday', 'permanent_residence', 'degree_of_education',
+                    'political_status', 'school_major_field', 'employment_intention', 'is_village_cadres',
+                    'is_village_backup_cadres', 'is_local_talent', 'is_career_creating_talent', 'working_place',
+                    'working_years', 'working_industry', 'working_salary', 'working_position', 'phone_num',
+                    'health_status', 'is_basic_living_allowances', 'is_rural_social_endowment_insurance',
+                    'is_medical_insurance', 'is_social_security', 'remarks'];
+        for (i in fields) {
+            var td = $('<td></td>').text(person[fields[i]]);
+            tr.append(td);
+        }
+        return tr
     }
 
 </script>
