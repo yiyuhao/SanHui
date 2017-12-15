@@ -114,15 +114,10 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 
-# django-pure-pagination配置
+# pagination配置
 PAGINATION_SETTINGS = {
-    # 分页插件配置
-    'PAGE_RANGE_DISPLAYED': 10,
-    'MARGIN_PAGES_DISPLAYED': 2,
     # 每页显示数
-    'PER_PAGE': 1,
-
-    'SHOW_FIRST_PAGE_WHEN_INVALID': True,
+    'PER_PAGE': 2,
 }
 
 # Internationalization
