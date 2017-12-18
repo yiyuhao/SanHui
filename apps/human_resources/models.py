@@ -90,7 +90,7 @@ class PersonnelInformation(models.Model):
 
     working_place = models.CharField(verbose_name='务工地点', max_length=30, null=True, blank=True)
     working_years = models.CharField(verbose_name='务工年限', max_length=4, null=True, blank=True, choices=(
-        ('1', '1年以下'), ('1to5', '1-5年(不含)'), ('5', '5年及以上')), default='1to5')
+        ('1', '1年以下'), ('1to5', '1-5年(不含)'), ('5', '5年及以上'), ('w', '无')), default='1to5')
     working_industry = models.ForeignKey(WorkingIndustry, verbose_name='务工行业', null=True, blank=True)
     working_salary = models.CharField(verbose_name='务工年收入', max_length=5, null=True, blank=True, choices=(
         ('5', '5万以下'), ('5to8', '5-8万'), ('8to12', '8-12万'), ('12', '12万以上')), default='5')
@@ -100,7 +100,7 @@ class PersonnelInformation(models.Model):
     health_status = models.CharField(verbose_name='身体状况', max_length=9, choices=(
         ('jk', '健康'), ('hyjb', '患有疾病'), ('cj', '残疾')), default='jk')
     is_basic_living_allowances = models.CharField(verbose_name='最低保障', max_length=3, choices=(
-        ('db', '低保'), ('w', '无')), default='w')
+        ('db', '低保'), ('wb', '五保'), ('w', '无')), default='w')
     is_rural_social_endowment_insurance = models.CharField(verbose_name='是否农保', max_length=3, choices=(
         ('yes', '是'), ('no', '否')), default='yes')
     is_medical_insurance = models.CharField(verbose_name='是否参加医保', max_length=3, choices=(
