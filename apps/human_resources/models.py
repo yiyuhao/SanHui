@@ -42,6 +42,32 @@ class WorkingIndustry(models.Model):
         return self.name
 
 
+class WorkingPlace(models.Model):
+    filter_name = models.CharField(verbose_name='英文缩写(用于筛选)', max_length=20)
+    name = models.CharField(verbose_name='务工地点', max_length=20)
+    add_time = models.DateTimeField(verbose_name='添加时间', default=datetime.now)
+
+    class Meta:
+        verbose_name = '务工地点'
+        verbose_name_plural = verbose_name
+
+    def __str__(self):
+        return self.name
+
+
+class DegreeOfEducation(models.Model):
+    filter_name = models.CharField(verbose_name='英文缩写(用于筛选)', max_length=20)
+    name = models.CharField(verbose_name='文化程度', max_length=20)
+    add_time = models.DateTimeField(verbose_name='添加时间', default=datetime.now)
+
+    class Meta:
+        verbose_name = '文化程度'
+        verbose_name_plural = verbose_name
+
+    def __str__(self):
+        return self.name
+
+
 class Family(models.Model):
     householder = models.CharField(verbose_name='户主', max_length=20)
     is_poor_households = models.CharField(verbose_name='是否为贫困户', max_length=3, choices=(
@@ -75,8 +101,7 @@ class PersonnelInformation(models.Model):
     permanent_residence = models.ForeignKey(Province, verbose_name='常住地')
     home = models.ForeignKey(Family, verbose_name='所在户(户主)', null=True, blank=True)
 
-    degree_of_education = models.CharField(verbose_name='文化程度', max_length=5, default='cz', choices=(
-        ('cz', '初中及以下'), ('gz', '高中'), ('dz', '大专'), ('bk', '本科'), ('ss', '硕士'), ('bs', '博士')))
+    degree_of_education = models.ForeignKey(DegreeOfEducation, verbose_name='文化程度', null=True, blank=True)
     political_status = models.CharField(verbose_name='政治面貌', max_length=6, default='qz', choices=(
         ('qz', '群众'), ('ty', '团员'), ('rdjjfz', '入党积极分子'), ('ybdy', '预备党员'), ('zsdy', '正式党员')))
     school_major_field = models.CharField(verbose_name='在读院校和专业', max_length=50, null=True, blank=True)
@@ -88,12 +113,10 @@ class PersonnelInformation(models.Model):
     is_local_talent = models.CharField(verbose_name='是否为乡土人才及技能', max_length=30, default='否')
     is_career_creating_talent = models.CharField(verbose_name='是否创业人才及创业方向', max_length=30, default='否')
 
-    working_place = models.CharField(verbose_name='务工地点', max_length=30, null=True, blank=True)
-    working_years = models.CharField(verbose_name='务工年限', max_length=4, null=True, blank=True, choices=(
-        ('1', '1年以下'), ('1to5', '1-5年(不含)'), ('5', '5年及以上'), ('w', '无')), default='1to5')
+    working_place = models.ForeignKey(WorkingPlace, verbose_name='务工地点', null=True, blank=True)
+    working_years = models.CharField(verbose_name='务工年限', max_length=20, null=True, blank=True)
     working_industry = models.ForeignKey(WorkingIndustry, verbose_name='务工行业', null=True, blank=True)
-    working_salary = models.CharField(verbose_name='务工年收入', max_length=5, null=True, blank=True, choices=(
-        ('5', '5万以下'), ('5to8', '5-8万'), ('8to12', '8-12万'), ('12', '12万以上')), default='5')
+    working_salary = models.CharField(verbose_name='务工年收入', max_length=20, null=True, blank=True)
     working_position = models.CharField(verbose_name='务工职位', max_length=30, null=True, blank=True, choices=(
         ('lb', '老板'), ('zcgb', '中层干部'), ('ybgr', '一般工人'), ('w', '无')), default='wbgr')
     phone_num = models.CharField(verbose_name='联系方式', max_length=11, null=True, blank=True)
