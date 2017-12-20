@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6d19973c-be89-4f70-880e-123cb9f78837" name="Default" comment="修改: 数据库修改3&#10;      1、文化程度更改为BLABLABLA&#10;      2、务工地点 像常住地那样做&#10;      3、务工年限  务工年收入改为手动输入&#10;      录入数据清空">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apps/human_resources/migrations/0015_auto_20171220_2007.py" />
+    <list default="true" id="6d19973c-be89-4f70-880e-123cb9f78837" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/human_resources/models.py" afterPath="$PROJECT_DIR$/apps/human_resources/models.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SanHui/settings.py" afterPath="$PROJECT_DIR$/SanHui/settings.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -23,11 +22,21 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/apps/human_resources/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="291">
-              <caret line="122" column="0" lean-forward="false" selection-start-line="122" selection-start-column="0" selection-end-line="123" selection-end-column="0" />
+            <state relative-caret-position="519">
+              <caret line="134" column="0" lean-forward="true" selection-start-line="134" selection-start-column="0" selection-end-line="134" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/SanHui/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="436">
+              <caret line="119" column="18" lean-forward="false" selection-start-line="119" selection-start-column="18" selection-end-line="119" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -37,7 +46,7 @@
         <entry file="file://$PROJECT_DIR$/templates/hr_info.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="423">
-              <caret line="316" column="0" lean-forward="true" selection-start-line="316" selection-start-column="0" selection-end-line="316" selection-end-column="0" />
+              <caret line="316" column="0" lean-forward="false" selection-start-line="316" selection-start-column="0" selection-end-line="316" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -47,7 +56,7 @@
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="57">
-              <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+              <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -145,10 +154,10 @@
         <option value="$PROJECT_DIR$/docker/django-uwsgi-nginx/requirements.txt" />
         <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/apps/human_resources/views.py" />
-        <option value="$PROJECT_DIR$/SanHui/settings.py" />
         <option value="$PROJECT_DIR$/apps/human_resources/adminx.py" />
         <option value="$PROJECT_DIR$/.idea/workspace.xml" />
         <option value="$PROJECT_DIR$/apps/human_resources/models.py" />
+        <option value="$PROJECT_DIR$/SanHui/settings.py" />
       </list>
     </option>
   </component>
@@ -201,7 +210,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
+              <option name="myItemId" value="SanHui" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -780,7 +789,14 @@
       <option name="project" value="LOCAL" />
       <updated>1513687735667</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="修改: 万元-&gt;元">
+      <created>1513771729789</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1513771729790</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -820,7 +836,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="新增: 务工年限、务工行业&#10;修改: 人力资源Model 政治面貌、是否为村后备干部、最低保障等" />
     <MESSAGE value="新增: 备注&#10;修改: 人力资源model 默认值" />
     <MESSAGE value="修改: 人力资源model 搜索字段" />
     <MESSAGE value="新增: 户(Family) model&#10;      人员信息新增外键home, 关联Family" />
@@ -845,7 +860,8 @@
     <MESSAGE value="修改: 使用原生Paginator代替django-pure-pagination" />
     <MESSAGE value="修改: 数据库修改3" />
     <MESSAGE value="修改: 数据库修改3&#10;      1、文化程度更改为BLABLABLA&#10;      2、务工地点 像常住地那样做&#10;      3、务工年限  务工年收入改为手动输入&#10;      录入数据清空" />
-    <option name="LAST_COMMIT_MESSAGE" value="修改: 数据库修改3&#10;      1、文化程度更改为BLABLABLA&#10;      2、务工地点 像常住地那样做&#10;      3、务工年限  务工年收入改为手动输入&#10;      录入数据清空" />
+    <MESSAGE value="修改: 万元-&gt;元" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改: 万元-&gt;元" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1127,14 +1143,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SanHui/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="95" column="0" lean-forward="true" selection-start-line="95" selection-start-column="0" selection-end-line="95" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/apps/human_resources/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="758">
@@ -1149,6 +1157,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="551">
           <caret line="50" column="21" lean-forward="false" selection-start-line="50" selection-start-column="10" selection-end-line="50" selection-end-column="21" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1165,7 +1174,7 @@
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="57">
-          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1173,15 +1182,23 @@
     <entry file="file://$PROJECT_DIR$/templates/hr_info.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="423">
-          <caret line="316" column="0" lean-forward="true" selection-start-line="316" selection-start-column="0" selection-end-line="316" selection-end-column="0" />
+          <caret line="316" column="0" lean-forward="false" selection-start-line="316" selection-start-column="0" selection-end-line="316" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/apps/human_resources/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="122" column="0" lean-forward="false" selection-start-line="122" selection-start-column="0" selection-end-line="123" selection-end-column="0" />
+        <state relative-caret-position="519">
+          <caret line="134" column="0" lean-forward="true" selection-start-line="134" selection-start-column="0" selection-end-line="134" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SanHui/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="436">
+          <caret line="119" column="18" lean-forward="false" selection-start-line="119" selection-start-column="18" selection-end-line="119" selection-end-column="18" />
           <folding />
         </state>
       </provider>

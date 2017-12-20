@@ -117,7 +117,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # pagination配置
 PAGINATION_SETTINGS = {
     # 每页显示数
-    'PER_PAGE': 2,
+    'PER_PAGE': 20,
 }
 
 # Internationalization
