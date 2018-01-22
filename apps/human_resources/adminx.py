@@ -50,7 +50,7 @@ class PersonnelInformationAdmin:
                     'is_medical_insurance', 'is_social_security', 'add_time', 'remarks']
 
     list_filter = list_display
-    search_fields = ['name', 'group', 'school_major_field', 'working_industry', 'working_position', 'remarks']
+    search_fields = ['name', 'group', 'school_major_field', 'working_position', 'remarks' ]
 
 
 xadmin.site.register(Province, ProvinceAdmin)
