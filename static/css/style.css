@@ -4498,6 +4498,7 @@ tbody.collapse.in {
   margin-bottom: 0;
   padding-left: 0;
   list-style: none;
+  font-size: 14px !important;
 }
 .nav:before, .nav:after {
   content: " ";
@@ -4513,7 +4514,7 @@ tbody.collapse.in {
 .nav > li > a {
   position: relative;
   display: block;
-  padding: 10px 15px;
+  padding: 25px 15px;
 }
 .nav > li > a:hover, .nav > li > a:focus {
   text-decoration: none;
@@ -4577,7 +4578,7 @@ tbody.collapse.in {
 }
 .nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
   color: #fff;
-  background-color: #e32929;
+  background-color: #f63935;
 }
 
 .nav-stacked > li {
@@ -4840,9 +4841,9 @@ tbody.collapse.in {
   margin: 15px -25px;
 }
 .navbar-nav > li > a {
-  padding-top: 10px;
-  padding-bottom: 10px;
-  line-height: 20px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  line-height: 50px;
   cursor: pointer;
 }
 @media (max-width: 767px) {
@@ -7347,7 +7348,7 @@ a:hover, a:active, a:focus {
 }
 
 p {
-  margin-bottom: 1.5em;
+  margin-bottom: 20px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -7378,7 +7379,6 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
   position: relative;
   z-index: 1;
-  padding-bottom: .5em;
   top: 0;
 }
 #fh5co-header > .navbar {
@@ -7403,17 +7403,17 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Roboto", arial, sans-serif;
 }
 #fh5co-header > .navbar li a {
-  font-size: 16px;
+  font-size: 14px;
   text-transform: uppercase;
-  color: #ccc;
+  color: #000;
   font-weight: 400;
 }
 #fh5co-header > .navbar li a:hover {
-  color: #e32929;
+  color: #f63935;
 }
 #fh5co-header > .navbar li.active a {
   background: none !important;
-  color: #e32929;
+  color: #f63935;
 }
 #fh5co-header .navbar-brand {
   text-transform: uppercase;
@@ -7422,7 +7422,6 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 400;
   margin-left: 0px;
   display: block;
-  padding-bottom: 1em;
   font-family: "Roboto Slab", arial, sans-serif;
   background: #e32929;
   color: #fff;
@@ -7445,32 +7444,30 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .fh5co-intro {
-  padding: 0em 0 2em 0;
+  padding: 50px 0 30px 0;
+  background-color: #fafafa;
 }
 @media screen and (max-width: 768px) {
   .fh5co-intro {
-    padding: 4em 0;
+    padding: 50px 0 30px 0;
   }
 }
 .fh5co-intro .intro-lead {
-  font-size: 50px;
-  line-height: 60px;
-  font-family: "Roboto Slab", arial, sans-serif;
+  font-size: 34px;
+  color: #000;
+  font-family: Microsoft YaHei, "Roboto Slab", arial, sans-serif;
 }
 
 .section-lead {
   font-size: 40px;
   line-height: 50px;
   margin-bottom: 1em;
-  font-family: "Roboto Slab", arial, sans-serif;
+  font-family: Microsoft YaHei, "Roboto Slab", arial, sans-serif;
 }
 
 #fh5co-portfolio {
   margin-bottom: 7em;
-  padding-left: 24em;
-  padding-right: 24em;
-  padding-top: 2em;
-  padding-bottom: 2em;
+  padding: 2em 30em;
   background: #fafafa;
   float: left;
   width: 100%;
@@ -7480,10 +7477,9 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 4em;
   }
 }
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1500px) {
   #fh5co-portfolio {
-    padding-left: 4em;
-    padding-right: 4em;
+    padding: 2em 15em;
   }
 }
 #fh5co-portfolio .fh5co-portfolio-item {
@@ -7555,7 +7551,7 @@ h1, h2, h3, h4, h5, h6 {
   #fh5co-portfolio .fh5co-portfolio-item.fh5co-img-right .fh5co-portfolio-figure {
     position: relative;
     top: auto;
-    bototm: auto;
+    bottom: auto;
     height: 400px;
   }
 }
@@ -8272,8 +8268,7 @@ a > img.fh5co-align-center {
 }
 /* Table Head */
 table thead th {
-  background-color: rgb(81, 130, 187);
-  color: #fff;
+  background-color: #f5f6fa;
   border-bottom-width: 0;
 }
 
@@ -8285,7 +8280,7 @@ table td {
 table tr, table th {
   border-width: 1px;
   border-style: solid;
-  border-color: rgb(81, 130, 187);
+  border-color: #e1e6eb;
 }
 
 /* Padding and font style */
@@ -8293,34 +8288,45 @@ table td, table th {
   padding: 5px 5px;
   font-size: 12px;
   font-family: Verdana;
-  font-weight: bold;
+}
+table th {
+  background-color: #f5f6fa;
+  color: #000;
+}
+table td {
+  color: #666;
 }
 .filter-box {
-  border:1px solid rgb(81, 130, 187);
+  border:1px solid #cccdcf;
   width:1500px;
-  height:212px;
+  padding: 0 25px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+.filter-box select {
+  border: none;
+  margin-right: 50px;
+  padding: 5px;
 }
 .filter {
-  height: 30px;
+  height: 44px;
   width: 50%;
   float: left;
   overflow: hidden;
-}
-.filter:nth-child(even) {
-  border-left: 1px solid rgb(81, 130, 187);
+  line-height: 44px;
+  border-top: 1px solid #cccdcf;
 }
 .filter-left {
-  width: 100px;
-  height: 29px;
-  float: left;
-  background-color: #f3f3f3;
-  color:#000;
-  font-weight: bold;
+  width: 80px;
+  height: 25px;
+  display: inline-block;
+  background-color: #9cafbe;
+  color:#fff;
   text-align: center;
-  line-height: 29px;
+  line-height: 25px;
 }
 .filter-right {
-  float: left;
+  display: inline-block;
   height: 30px;
   line-height: 30px;
   text-align: left;
@@ -8349,25 +8355,24 @@ table td, table th {
 .filter-tag {
   padding: 5px;
   padding-right: 20px;
-  background-color: #f3f3f3;
+  background-color: #fff;
   position: relative;
-  border: 1px solid #ddd;
+  border: 1px solid #698496;
   margin-right: 10px;
-  color: #999;
-}
-.filter-tag:hover {
-  border: 1px solid #e4393c;
+  color: #698496;
+  font-size: 14px;
 }
 .hr-box {
-  margin-left:200px;
-  margin-right:200px;
+  margin-left:180px;
+  margin-right:180px;
+  padding: 20px;
 }
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1500px) {
   .filter-box {
     width: 1100px;
   }
   .filter {
-    width: 548px;
+    width: 524px;
   }
   .filter-tags {
     width: 1100px;
@@ -8388,7 +8393,7 @@ table td, table th {
   background: url(../images/close2.png) no-repeat;
 }
 .text-red {
-  color:#e4393c
+  color:#f63935
 }
 .page-box {
   position: relative;
@@ -8398,4 +8403,12 @@ table td, table th {
 }
 .hidden {
   display: none;
+}
+.tag {
+  width: 8px;
+  height: 23px;
+  border-radius: 4px;
+  background-color: #f63935;
+  margin-right: 10px;
+  float: left;
 }

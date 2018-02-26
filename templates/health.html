@@ -1,0 +1,293 @@
+{% load static %}
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>三会村-医疗卫生</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="" />
+
+    <!-- Facebook and Twitter integration -->
+    <meta property="og:title" content=""/>
+    <meta property="og:image" content=""/>
+    <meta property="og:url" content=""/>
+    <meta property="og:site_name" content=""/>
+    <meta property="og:description" content=""/>
+    <meta name="twitter:title" content="" />
+    <meta name="twitter:image" content="" />
+    <meta name="twitter:url" content="" />
+    <meta name="twitter:card" content="" />
+
+    <!-- Place favicon.ico and apple-touch-icon.png' %} in the root directory -->
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <!-- Google Webfonts -->
+    <!--<link href='http://fonts.useso.com/css?family=Roboto:400,300,100,500' rel='stylesheet' type='text/css'>-->
+    <!--<link href='http://fonts.useso.com/css?family=Roboto+Slab:400,300,100,500' rel='stylesheet' type='text/css'>-->
+
+    <!-- Animate.css' %} -->
+    <link rel="stylesheet" href="{% static 'css/animate.css' %}">
+    <!-- Icomoon Icon Fonts-->
+    <link rel="stylesheet" href="{% static 'css/icomoon.css' %}">
+    <!-- Simple Line Icons -->
+    <link rel="stylesheet" href="{% static 'css/simple-line-icons.css' %}">
+    <!-- Theme Style -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <!-- Modernizr JS -->
+    <script src="{% static 'js/modernizr-2.6.2.min.js' %}"></script>
+    <!-- FOR IE9 below -->
+    <!--[if lt IE 9]>
+    <script src="{% static 'js/respond.min.js' %}"></script>
+    <![endif]-->
+
+</head>
+<body>
+<header id="fh5co-header" role="banner">
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 col-md-offset-2">
+                    <!--<div class="navbar-header">-->
+                    <!--&lt;!&ndash; Mobile Toggle Menu Button &ndash;&gt;-->
+                    <!--<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle visible-xs-block" data-toggle="collapse" data-target="#fh5co-navbar" aria-expanded="false" aria-controls="navbar"><i></i></a>-->
+                    <!--<a class="navbar-brand" href="{% url 'index' %}">Clean</a>-->
+                    <!--</div>-->
+                    <div id="fh5co-navbar" class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="{% url 'index' %}"><span>首页 <span class="border"></span></span></a></li>
+                            <li><a href="{% url 'natural' %}"><span>自然环境 <span class="border"></span></span></a></li>
+                            <li><a href="{% url 'history' %}"><span>历史文化 <span class="border"></span></span></a></li>
+                            <li><a href="{% url 'tour' %}"><span>康养旅游 <span class="border"></span></span></a></li>
+                            <li><a href="{% url 'farming' %}"><span>现代农业 <span class="border"></span></span></a></li>
+                            <li><a href="{% url 'hr_info' %}"><span>人力资源 <span class="border"></span></span></a></li>
+                            <li class="active"><a href="{% url 'health' %}"><span>医疗卫生 <span class="border"></span></span></a></li>
+                            <li><a href="{% url 'live_info' %}"><span>脱贫奔康 <span class="border"></span></span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+<div id="fh5co-main">
+    <div class="fh5co-intro text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <span class="intro-lead">医疗卫生</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="fh5co-portfolio">
+        <div class="fh5co-portfolio-item" style="background: #fff;padding:20px;">
+            <div style="width:100%">
+                <div style="margin-bottom:1.5em">
+                    <span class="tag"></span><span style="color: #000;font-size: 18px;">患病人数</span>
+                </div>
+                <div class="" style="width:100%">
+                    <p >
+                        三会村有慢性病人数294人，占全村总人数36.4%，贫困户中患慢性病人数123人，占贫困户比53.2%，非贫困户患慢性病171人，占非贫困户32.6%。
+                    </p>
+                </div>
+                <div style="width:70%;height:400px;margin:0 auto">
+                    <div id="chart_1" style="width:100%;height:100%;">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="fh5co-portfolio-item" style="background: #fff;padding:20px;">
+            <div style="width:100%">
+                <div style="margin-bottom:1.5em">
+                    <span class="tag"></span><span style="color: #000;font-size: 18px;">患病种类</span>
+                </div>
+                <div class="" style="width:100%">
+                    <p >
+                        三会村村民患慢性病种类主要为高血压、糖尿病、肺部疾病、心脏病，其中，患高血压共110人，占比37.4%；患糖尿病共59人，占比20.1%；患肺部疾病共56人，占比19%；患心脏病共26人，占比8.8%。贫困户中，患高血压共51人，占比41.5%，患糖尿病共32人，占比26%，换肺部疾病共29人，占比23.6%，患心脏病共9人，占比7.3%。
+                    </p>
+                </div>
+                <div style="width:70%;height:400px;margin:0 auto">
+                    <div id="chart_2" style="width:100%;height:100%;">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="fh5co-portfolio-item" style="background: #fff;padding:20px;">
+            <div style="width:100%">
+                <div style="margin-bottom:1.5em">
+                    <span class="tag"></span><span style="color: #000;font-size: 18px;">患病支出</span>
+                </div>
+                <div class="" style="width:100%">
+                    <p >
+                        三会村患慢性病村民人均年医疗支出约1200元，其中，医疗支出不足400元共47人，占比16%，医疗支出400-1200元共185人，占比62.9%，医疗支出1200-2000元共37人，占比12.6%，医疗支出2000元以上共25人，占比8.5%。
+                    </p>
+                    <p >
+                        患慢性病贫困户人均年医疗支出不足400元共30人，占比24.4%，医疗支出400-1200元共76人，占比61.8%，医疗支出1200-2000元共11人，占8.9%，医疗支出2000元以上共6人，占比4.9%。
+                    </p>
+                </div>
+                <div style="width:70%;height:400px;margin:0 auto">
+                    <div id="chart_3" style="width:100%;height:100%;">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+        <!-- jQuery -->
+        <script src="{% static 'js/jquery.min.js' %}"></script>
+        <!-- jQuery Easing -->
+        <script src="{% static 'js/jquery.easing.1.3.js' %}"></script>
+        <!-- Bootstrap -->
+        <script src="{% static 'js/bootstrap.min.js' %}"></script>
+        <!-- Waypoints -->
+        <script src="{% static 'js/jquery.waypoints.min.js' %}"></script>
+        <!-- Main JS -->
+        <script src="{% static 'js/main.js' %}"></script>
+        <!-- Echarts JS-->
+        <script src="{% static 'js/echarts.common.min.js' %}"></script>
+
+        <script type="text/javascript">
+            // 基于准备好的dom，初始化echarts实例,农业数据柱状图
+            var myChart1 = echarts.init(document.getElementById('chart_1'));
+
+            var option1 = {
+                title : {
+                    text: '三会村民患病人数统计图',
+                    x: 'center'
+                },
+                tooltip : {
+                    trigger: 'axis'
+                },
+                legend: {
+                    orient: 'horizontal',
+                    bottom: '0',
+                    data: ['患慢性病','健康']
+                },
+                color: ['#e4393c','#09F'],
+                calculable : true,
+                xAxis : [
+                    {
+                        type : 'category',
+                        data : ['村民','贫困户','非贫困户']
+                    }
+                ],
+                yAxis : [
+                    {
+                        type : 'value'
+                    }
+                ],
+                series : [
+                    {
+                        name:'患慢性病',
+                        type:'bar',
+                        data:[294, 123, 171],
+                        stack: '人'
+                    },
+                    {
+                        name:'健康',
+                        type:'bar',
+                        stack: '人',
+                        data:[514, 108, 354],
+                    }
+                ]
+            };
+            var myChart2 = echarts.init(document.getElementById('chart_2'));
+
+            var option2 = {
+                title : {
+                    text: '三会村民患病种类统计图',
+                    x: 'center'
+                },
+                tooltip : {
+                    trigger: 'axis',
+                    formatter: "{a} <br/>{b} : {c}人"
+                },
+                color: ['#e4393c','#09F','#DF632D'],
+                calculable : true,
+                xAxis : [
+                    {
+                        type : 'category',
+                        data : ['高血压','糖尿病','肺部疾病','心脏病']
+                    }
+                ],
+                yAxis : [
+                    {
+                        type : 'value'
+                    }
+                ],
+                series : [
+                    {
+                        name:'村民',
+                        type:'bar',
+                        data:[110, 59, 56, 26]
+                    },
+                    {
+                        name:'贫困户',
+                        type:'bar',
+                        data:[51, 32, 29, 9]
+                    },
+                    {
+                        name:'非贫困户',
+                        type:'bar',
+                        data:[59, 27, 27, 17]
+                    }
+                ]
+            };
+            var myChart3 = echarts.init(document.getElementById('chart_3'));
+
+            var option3 = {
+                title : {
+                    text: '三会村民患病支出统计图',
+                    x: 'center'
+                },
+                tooltip : {
+                    trigger: 'axis',
+                    formatter: "{a} <br/>{b} : {c}人"
+                },
+                color: ['#e4393c','#09F','#DF632D'],
+                calculable : true,
+                xAxis : [
+                    {
+                        type : 'category',
+                        data : ['400元以下','400-1200元','1200-2000元','2000元以上']
+                    }
+                ],
+                yAxis : [
+                    {
+                        type : 'value'
+                    }
+                ],
+                series : [
+                    {
+                        name:'村民',
+                        type:'bar',
+                        data:[47, 185, 37, 25]
+                    },
+                    {
+                        name:'贫困户',
+                        type:'bar',
+                        data:[30, 76, 11, 6]
+                    },
+                    {
+                        name:'非贫困户',
+                        type:'bar',
+                        data:[17, 109, 26, 19]
+                    }
+                ]
+            };
+            // 使用刚指定的配置项和数据显示图表。
+            myChart1.setOption(option1);
+            myChart2.setOption(option2);
+            myChart3.setOption(option3);
+        </script>
+</body>
+</html>

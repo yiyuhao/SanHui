@@ -31,7 +31,7 @@ img{max-width:100%;}
 body{
     font-family: 'Droid Sans', sans-serif;
     font-size:100%;
-    background: url(../images/bg.jpg);
+    background: url(../images/login-bg.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
@@ -39,15 +39,14 @@ body{
 }
 .message.warning  {
     background: rgba(255, 255, 255, 0.33);
-    -moz-box-shadow: 0 0 0 3px rgba(56, 41, 32, 0.25);
-    -webkit-box-shadow: 0 0 0 3px rgba(56, 41, 32, 0.25);
-    box-shadow: 0 0 0 3px rgba(56, 41, 32, 0.25);
+    /*-moz-box-shadow: 0 0 0 3px rgba(56, 41, 32, 0.25);*/
+    /*-webkit-box-shadow: 0 0 0 3px rgba(56, 41, 32, 0.25);*/
     margin:9% auto 0;
     width: 26%;
 }
 .login-head {
     padding: 2em 0;
-    background: #6D4A70;
+    background: #44618a;
     position:relative;
 }
 .login-head h1 {
@@ -62,7 +61,6 @@ form {
 
 }
 form li{
-    border: 2px ridge rgba(187, 185, 189, 0.11);
     border-radius: 0.3em;
     -webkit-border-radius:0.3em;
     -moz-border-radius:0.3em;
@@ -81,7 +79,7 @@ form li{
     margin: 12px 9px 9px 0px;
 }
 .user{
-    background: url(../images/icons.png) no-repeat 7px 1px;
+    background: url(../images/icons.png) no-repeat 11px 1px;
 
 }
 .lock{
@@ -99,7 +97,7 @@ input[type="text"], input[type="password"] {
     border:none;
 }
 input[type="text"]:hover, input[type="password"]:hover{
-    color:#9E61A3;
+    color:#44618a;
 
 }
 .submit h4 a{
@@ -112,7 +110,7 @@ input[type="text"]:hover, input[type="password"]:hover{
     margin-left: 21px;
 }
 .submit h4 a:hover{
-    color:#8D4294;
+    color:#44618a;
 }
 /*************************/
 .submit{
@@ -128,8 +126,8 @@ input[type="submit"] {
     padding: 12px 0px;
     width: 35%;
     font-size: 18px;
-    background:#6C496F;
-    border:2px solid #6C496F;
+    background:#44618a;
+    border:2px solid #44618a;
     border-radius: 0.5em;
     -webkit-border-radius:0.5em;
     -moz-border-radius:0.5em;
@@ -137,8 +135,8 @@ input[type="submit"] {
 }
 input[type="submit"]:hover {
     background: #fff;
-    color:#6C496F;
-    border:2px solid #6C496F;
+    color:#44618a;
+    border:2px solid #44618a;
 }
 /*----*/
 /* footer */

@@ -17,13 +17,13 @@ h1, h2, h3, h4, h5, h6 {
     -ms-transition: all 0.4s ease-in-out;
     -o-transition: all 0.4s ease-in-out;
     transition: all 0.4s ease-in-out;
-    background-image: linear-gradient(to top, rgba(46, 49, 65, 0), rgba(46, 49, 65, 1)), url(../images/01_header_image.jpg);
+    background-image: linear-gradient(to top, rgba(46, 49, 65, 0), rgba(46, 49, 65, 0)), url(../images/home.png);
     background-size: auto, cover;
     background-attachment: fixed;
     background-position: center, center;
     background-repeat: no-repeat;
 	padding: 10em 0 4.75em 0 ;
-	height: 80vh;
+	height: 710px;
 	color: #ffffff;	
 }
 
@@ -59,16 +59,16 @@ h1, h2, h3, h4, h5, h6 {
 	float: right;
  }
 
-#two {
+#two,#four {
 	background-color: #242d44;
 	color: #ffffff;
 }
 
-#four {
-	background-color: #242d44;
-	color: #ffffff;
-	padding-top: 100px;
-	padding-bottom: 50px;
+#five {
+	background-color: #fafafa;
+	color: #333;
+	padding-top: 120px;
+	padding-bottom: 20px;
 }
 
 .four-features{
@@ -138,7 +138,8 @@ h1, h2, h3, h4, h5, h6 {
 
 
 .four-features .features-content{
-	padding: 55px 35px;
+	height: 112px;
+	background-color: #fff;
 }
 
 .footer-features {
@@ -186,7 +187,7 @@ textarea {
 }
 
 .four-top {
-	padding: 50px;
+	padding: 30px;
 	text-align: center;
 }
 
@@ -325,7 +326,8 @@ h3 {
 
 
 .section-heading .title h2 {
-	margin-bottom: 35px;
+	margin-bottom: 20px;
+	font-size: 28px;
 }
 
 .section-highlight {
@@ -342,13 +344,6 @@ h3 {
 	font-size: 16px;
 }
 
-.four-features .features-content h3 {
-	margin-bottom: 32px;
-}
-
-.four-features .features-content p {
-	margin-bottom: 32px;
-}
 
 .footer-bottom p {
 	text-align: center;
@@ -480,11 +475,11 @@ body.is-menu-visible #menu .inner {
 }
 
 #header nav a[href="#menu"]:hover {
-	background-color: rgba(255, 255, 255, 0.025);
+	color: #f63935
 }
 
 #header nav a[href="#menu"]:active {
-	background-color: rgba(255, 255, 255, 0.075);
+	color: #f63935
 }
 
 #page-wrapper {
@@ -550,7 +545,7 @@ body.is-menu-visible #menu .inner {
 	opacity: 0;
 	position: relative;
 	width: 20em;
-	height: 450px;
+	height: 480px;
 }
 
 #menu h2 {
@@ -602,7 +597,7 @@ body.is-menu-visible #menu .inner {
 }
 
 #menu .links li a:hover {
-	background: #45558d;
+	color: #f63935;
 }
 
 /*=-=-=-==-  page loading  -=-==-=-==*/
@@ -950,8 +945,7 @@ button[disabled], html input[disabled] {
 }
 
 .table.table-hover tr:hover {
-	background-color: lightgrey;
-	color: #242d44;
+	color: #f63935;
 }
 
 section.table {
@@ -1442,4 +1436,27 @@ textarea#message {
     height:100%;
     overflow:visible;
     background: #fff url('../images/preloader.gif') no-repeat center center;
+}
+#home-nav ul li a:hover {
+	background-color: #fff !important;
+	color: #ff4b4b !important;
+}
+#home-nav ul li a{
+	color: #000;
+}
+#home-nav .active a span{
+	color: #ff4b4b !important;
+}
+.section {
+	float: left;
+	height: 156px;
+	width: 262px;
+	background-color: #fff;
+	cursor: pointer;
+}
+.navbar-nav > li > a {
+	padding-top: 25px;
+	padding-bottom: 25px;
+	line-height: 30px;
+	cursor: pointer;
 }

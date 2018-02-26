@@ -1,0 +1,224 @@
+{% load static %}
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>三会村-基础设施</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	<meta name="author" content="" />
+
+  <!-- Facebook and Twitter integration -->
+	<meta property="og:title" content=""/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content=""/>
+	<meta property="og:description" content=""/>
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<!-- Place favicon.ico and apple-touch-icon.png' %} in the root directory -->
+	<link rel="shortcut icon" href="favicon.ico">
+
+	<!-- Google Webfonts -->
+	<!--<link href='http://fonts.useso.com/css?family=Roboto:400,300,100,500' rel='stylesheet' type='text/css'>-->
+	<!--<link href='http://fonts.useso.com/css?family=Roboto+Slab:400,300,100,500' rel='stylesheet' type='text/css'>-->
+	
+	<!-- Animate.css' %} -->
+	<link rel="stylesheet" href="{% static 'css/animate.css' %}">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="{% static 'css/icomoon.css' %}">
+	<!-- Simple Line Icons -->
+	<link rel="stylesheet" href="{% static 'css/simple-line-icons.css' %}">
+	<!-- Theme Style -->
+	<link rel="stylesheet" href="{% static 'css/style.css' %}">
+	<!-- Modernizr JS -->
+	<script src="{% static 'js/modernizr-2.6.2.min.js' %}"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="{% static 'js/respond.min.js' %}"></script>
+	<![endif]-->
+	<script src="//at.alicdn.com/t/font_502008_wu4w137i418aor.js' %}"></script>
+	</head>
+	<body>
+		
+	<header id="fh5co-header" role="banner">
+		<nav class="navbar navbar-default" role="navigation">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-10 col-md-offset-2">
+						<!--<div class="navbar-header">-->
+						<!--&lt;!&ndash; Mobile Toggle Menu Button &ndash;&gt;-->
+						<!--<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle visible-xs-block" data-toggle="collapse" data-target="#fh5co-navbar" aria-expanded="false" aria-controls="navbar"><i></i></a>-->
+						<!--<a class="navbar-brand" href="{% url 'index' %}">Clean</a>-->
+						<!--</div>-->
+						<div id="fh5co-navbar" class="navbar-collapse collapse">
+							<ul class="nav navbar-nav navbar-right">
+								<li><a href="{% url 'index' %}"><span>首页 <span class="border"></span></span></a></li>
+								<li><a href="{% url 'natural' %}"><span>自然环境 <span class="border"></span></span></a></li>
+								<li><a href="{% url 'history' %}"><span>历史文化 <span class="border"></span></span></a></li>
+								<li><a href="{% url 'tour' %}"><span>康养旅游 <span class="border"></span></span></a></li>
+								<li class="active"><a href="{% url 'farming' %}"><span>现代农业 <span class="border"></span></span></a></li>
+								<li><a href="{% url 'hr_info' %}"><span>人力资源 <span class="border"></span></span></a></li>
+								<li><a href="{% url 'health' %}"><span>医疗卫生 <span class="border"></span></span></a></li>
+								<li><a href="{% url 'live_info' %}"><span>脱贫奔康 <span class="border"></span></span></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</nav>
+	</header>
+	<!-- END .header -->
+	    
+	<div id="fh5co-main">
+		<div class="fh5co-intro text-center">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2">
+						<span class="intro-lead">现代农业</span>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="fh5co-portfolio">
+			<div class="fh5co-portfolio-item" style="background: #fff;padding:20px;">
+				<div style="width:100%">
+					<div style="margin-bottom:1.5em">
+						<span class="tag"></span><span style="color: #000;font-size: 18px;">农业发展现状</span>
+					</div>
+					<div class="" style="width:100%">
+						<p >
+							土地利用状况：全村现有耕地2346亩，人均耕地1.86亩。已流转1595亩（其中华朴1170亩，张小红50亩，合作社350亩，科兴公司25亩），群众自种751亩。
+						</p>
+					</div>
+					<div style="width:70%;height:400px;margin:0 auto">
+						<div id="chart_1" style="width:100%;height:100%;">
+
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="fh5co-portfolio-item" style="background: #fff;padding:20px;">
+				<div style="width:100%">
+					<div style="margin-bottom:1.5em">
+						<span class="tag"></span><span style="color: #000;font-size: 18px;">种植业</span>
+					</div>
+					<div class="" style="width:100%">
+						<p >
+							三会村主要种植猕猴桃、罗汉果、黄金梨、雪莲果等经济作物，116户直接参与种植，截至2017年，猕猴桃1225亩，亩产约1000公斤，年产值1680万元；罗汉果150亩，亩产18000个，年产值60万元；黄金梨200亩，预期亩产约1800公斤；雪莲果200亩，亩产约1000公斤，年产值40万元；油牡丹20亩，亩产约700公斤，年产值5.6万元。主要经济作物以外，全村种植蔬菜345亩，粮油421亩，其他作物108亩。
+						</p>
+					</div>
+					<div style="width:70%;height:400px;margin:0 auto">
+						<div id="chart_2" style="width:100%;height:100%;">
+
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="fh5co-portfolio-item" style="background: #fff;padding:20px;">
+				<div style="width:100%">
+					<div style="margin-bottom:1.5em">
+						<span class="tag"></span><span style="color: #000;font-size: 18px;">禽畜养殖</span>
+					</div>
+					<div class="" style="width:100%">
+						<p >
+							截至2017年底，全村年出栏家禽12000只，收益30元/只，年出栏生猪5000头，收益500元 /头，年收益共计286万。
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="fh5co-portfolio-item" style="background: #fff;padding:20px;">
+				<div style="width:100%">
+					<div style="margin-bottom:1.5em">
+						<span class="tag"></span><span style="color: #000;font-size: 18px;">地理气候</span>
+					</div>
+					<div class="" style="width:30%;margin: 0 auto">
+						<img src="{% static 'images/farming1.png' %}" alt="" style="width: 100%">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--<footer id="fh5co-footer">-->
+		<!--<div class="container">-->
+			<!--<div class="row">-->
+				<!--<div class="col-md-10 col-md-offset-1 text-center">-->
+					<!--<p>Copyright &copy; 2016.Company name All rights reserved.<a target="_blank" href="http://sc.chinaz.com/moban/">&#x7F51;&#x9875;&#x6A21;&#x677F;</a></p>-->
+				<!--</div>-->
+			<!--</div>-->
+		<!--</div>-->
+	<!--</footer>-->
+
+
+	<!-- jQuery -->
+	<script src="{% static 'js/jquery.min.js' %}"></script>
+	<!-- jQuery Easing -->
+	<script src="{% static 'js/jquery.easing.1.3.js' %}"></script>
+	<!-- Bootstrap -->
+	<script src="{% static 'js/bootstrap.min.js' %}"></script>
+	<!-- Waypoints -->
+	<script src="{% static 'js/jquery.waypoints.min.js' %}"></script>
+	<!-- Main JS -->
+	<script src="{% static 'js/main.js' %}"></script>
+	<!-- Echarts JS-->
+	<script src="{% static 'js/echarts.common.min.js' %}"></script>
+
+	<script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例,配套设施柱状图
+        var myChart1 = echarts.init(document.getElementById('chart_1'));
+
+        var option1 = {
+            title: {
+                text: '三会耕地统计图',
+                x:'center'
+            },
+            tooltip: {},
+            xAxis: {
+                data: ["现有耕地","群众耕地","流转耕地"]
+            },
+            yAxis: {},
+            series: [{
+                name: '耕地面积(亩)',
+                type: 'bar',
+				data: [2346,751,1595]
+            }],
+			color: ['#18CDAC']
+        };
+        var myChart2 = echarts.init(document.getElementById('chart_2'));
+
+        var option2 = {
+            title: {
+                text: '三会经济作物统计图',
+                x:'center'
+            },
+            tooltip: {},
+            xAxis: {
+                data: ["猕猴桃","罗汉果","黄金梨","雪莲果","油牡丹","蔬菜","粮油","其他作物"]
+            },
+            yAxis: {},
+            series: [{
+                name: '种植面积(亩)',
+                type: 'bar',
+                data: [1225,150,200,200,20,345,421,108]
+            }],
+            color: ['#18CDAC']
+        };
+
+//
+
+        // 使用刚指定的配置项和数据显示图表。
+        myChart1.setOption(option1);
+        myChart2.setOption(option2);
+	</script>
+	</body>
+</html>
