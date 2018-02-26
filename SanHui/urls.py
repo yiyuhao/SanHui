@@ -17,7 +17,7 @@ from django.conf.urls import url
 from django.contrib import admin
 import xadmin
 
-from front_end.views import IndexView, LoginView, BaseInfoView, IndustryInfoView, InfoView, PartyInfoView, \
+from front_end.views import IndexView, LoginView, FarmingView, HealthView, HistoryView, NaturalView, TourView, \
     LiveInfoView
 from human_resources.views import HrInfoView, AjaxGetHrInfoView
 
@@ -25,13 +25,15 @@ urlpatterns = [
     url(r'^xadmin/', xadmin.site.urls),
     url(r'^$', IndexView.as_view(), name='index'),
 
+    url(r'^farming/', FarmingView.as_view(), name='farming'),
+    url(r'^health/', HealthView.as_view(), name='health'),
+    url(r'^history/', HistoryView.as_view(), name='history'),
+    url(r'^natural/', NaturalView.as_view(), name='natural'),
+    url(r'^tour/', TourView.as_view(), name='tour'),
+    url(r'^live_info/', LiveInfoView.as_view(), name='live_info'),
+
     url(r'^hr_info/', HrInfoView.as_view(), name='hr_info'),
     url(r'^login/', LoginView.as_view(), name='login'),
-    url(r'^base_info/', BaseInfoView.as_view(), name='base_info'),
-    url(r'^industry_info/', IndustryInfoView.as_view(), name='industry_info'),
-    url(r'^info/', InfoView.as_view(), name='info'),
-    url(r'^party_info/', PartyInfoView.as_view(), name='party_info'),
-    url(r'^live_info/', LiveInfoView.as_view(), name='live_info'),
 
     url(r'^get_hr_info/', AjaxGetHrInfoView.as_view(), name='get_hr_info'),
 ]

@@ -1416,7 +1416,9 @@ textarea {
   font-size: inherit;
   line-height: inherit;
 }
-
+select {
+  
+}
 a {
   color: #e32929;
   text-decoration: none;
@@ -4845,6 +4847,11 @@ tbody.collapse.in {
   padding-bottom: 25px;
   line-height: 50px;
   cursor: pointer;
+}
+.navbar-nav > li > a > span {
+  font-family: "Microsoft YaHei" ! important;
+  font-weight: 600;
+  font-size: 15px;
 }
 @media (max-width: 767px) {
   .navbar-nav .open .dropdown-menu {
@@ -8291,7 +8298,7 @@ table td, table th {
 }
 table th {
   background-color: #f5f6fa;
-  color: #000;
+  color: #333;
 }
 table td {
   color: #666;
@@ -8335,13 +8342,15 @@ table td {
   margin: 0 10px;
 }
 .filter-right label {
-  margin: 0 10px;
+  padding: 0 10px;
   font-weight: 100;
-  color: #005aa0;
+  color: #666;
   cursor: pointer;
 }
 .filter-right label:hover {
-  color: #e4393c;
+  /*color: #e4393c;*/
+  background-color: #f2f2f2;
+  border-radius: 4px;
 }
 .border-bottom {
   border-bottom: 1px solid #ddd;
@@ -8359,7 +8368,7 @@ table td {
   position: relative;
   border: 1px solid #698496;
   margin-right: 10px;
-  color: #698496;
+  color: #333;
   font-size: 14px;
 }
 .hr-box {
@@ -8408,7 +8417,7 @@ table td {
   width: 8px;
   height: 23px;
   border-radius: 4px;
-  background-color: #f63935;
+  background-color: #1479ca;
   margin-right: 10px;
   float: left;
 }

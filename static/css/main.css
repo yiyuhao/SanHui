@@ -23,7 +23,7 @@ h1, h2, h3, h4, h5, h6 {
     background-position: center, center;
     background-repeat: no-repeat;
 	padding: 10em 0 4.75em 0 ;
-	height: 710px;
+	height: 650px;
 	color: #ffffff;	
 }
 
@@ -78,15 +78,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .four-features.four-features-left-bottom {
-    margin: 0 15px 30px 15px;
+    margin: 0 15px 0 15px;
 }
 
 .four-features.four-features-middle-bottom {
-	margin: 0 15px 30px 15px;
+	margin: 0 15px 0 15px;
 }
 
 .four-features.four-features-right-bottom {
-    margin: 0 15px 30px 15px;
+    margin: 0 15px 0 15px;
 }
 
 .four-features.four-features-left-top {
@@ -1443,13 +1443,16 @@ textarea#message {
 }
 #home-nav ul li a{
 	color: #000;
+	font-family: "Microsoft YaHei" ! important;
+	font-weight: 600;
+	font-size: 15px;
 }
 #home-nav .active a span{
 	color: #ff4b4b !important;
 }
 .section {
 	float: left;
-	height: 156px;
+	height: 176px;
 	width: 262px;
 	background-color: #fff;
 	cursor: pointer;
