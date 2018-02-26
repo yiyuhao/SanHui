@@ -62,14 +62,14 @@
                     <div id="fh5co-navbar" class="navbar-collapse collapse">
                         <ul class="nav navbar-nav navbar-right">
                             <li><a href="{% url 'index' %}"><span>首页 <span class="border"></span></span></a></li>
-                            <li><a href="{% url 'base_info' %}"><span>基础设施 <span class="border"></span></span></a></li>
-                            <li><a href="{% url 'industry_info' %}"><span>产业发展 <span class="border"></span></span></a>
+                            <li><a href="{% url 'natural' %}"><span>自然环境 <span class="border"></span></span></a></li>
+                            <li><a href="{% url 'history' %}"><span>历史文化 <span class="border"></span></span></a></li>
+                            <li><a href="{% url 'tour' %}"><span>康养旅游 <span class="border"></span></span></a></li>
+                            <li><a href="{% url 'farming' %}"><span>现代农业 <span class="border"></span></span></a></li>
+                            <li class="active"><a href="{% url 'hr_info' %}"><span>人力资源 <span class="border"></span></span></a>
                             </li>
-                            <li class="active"><a href="{% url 'hr_info' %}"><span>人力资源 <span
-                                    class="border"></span></span></a></li>
-                            <li><a href="{% url 'live_info' %}"><span>扶贫民生 <span class="border"></span></span></a></li>
-                            <li><a href="{% url 'party_info' %}"><span>基础组织 <span class="border"></span></span></a></li>
-                            <li><a href="{% url 'party_info' %}"><span>地理环境 <span class="border"></span></span></a></li>
+                            <li><a href="{% url 'health' %}"><span>医疗卫生 <span class="border"></span></span></a></li>
+                            <li><a href="{% url 'live_info' %}"><span>脱贫奔康 <span class="border"></span></span></a></li>
                         </ul>
                     </div>
                 </div>
@@ -77,44 +77,39 @@
         </div>
     </nav>
 </header>
-<div id="fh5co-main">
+<div id="fh5co-main" style="background-color: #fafafa">
     <div class="fh5co-intro text-center">
         <div class="container">
             <div class="row">
                 <div class="col-md-8 col-md-offset-2">
-                    <h1 class="intro-lead">人力资源</h1>
-                    <p class="">人力资源数据</p>
+                    <span class="intro-lead">人力资源</span>
                 </div>
             </div>
         </div>
     </div>
-    <div class="hr-box">
+    <div class="hr-box" style="margin-top: 20px;background-color: #fff;">
         <div class="filter-box" id="filter">
-
             {% for filter_field in filter_fields %}
-                <div class="filter border-bottom">
+                <div class="filter">
                     <div class="filter-left">
                         {{ filter_field.1 }}
                     </div>
                     <div class="filter-right">
                         {% for options in filter_field.2 %}
-                            <label><input type="radio" name="{{ filter_field.0 }}" class="hidden" value="{{ options.0 }}">{{ options.1 }}</label>
+                            <label><input type="radio" name="{{ filter_field.0 }}" class="hidden"
+                                          value="{{ options.0 }}">{{ options.1 }}</label>
                         {% endfor %}
                     </div>
                 </div>
             {% endfor %}
-
         </div>
+
         <div class="filter-tags">
             <div class="pull-left" style="margin-top:5px;">
                 筛选条件：
             </div>
-{#            <div class="pull-left filter-tag">#}
-{#                <input type="radio" name="gender" value="male" class="hidden">#}
-{#                <span>性别：</span><span class="">男</span>#}
-{#                <span class="icon-close"></span>#}
-{#            </div>#}
         </div>
+
         <div style="overflow-x: auto;overflow-y: hidden">
             <table id='hr_table' style="width:1500px;margin:0 auto;table-layout:fixed;overflow: hidden">
                 <tr>
@@ -124,20 +119,20 @@
                     <th style="width:120px;">出生年月</th>
                     <th style="width:50px;">常住地</th>
                     <th style="width:60px;">文化程度</th>
-                    <th style="width:60px;">政治面貌/th>
+                    <th style="width:60px;">政治面貌</th>
                     <th>在读院校和专业</th>
                     <th style="width:60px;">就业意向</th>
-                    <th style="width:60px;">村干部及职位</th>
+                    <th style="width:60px;">村干部</th>
                     <th style="width:72px;">村后备干部</th>
                     <th style="width:60px;">乡土人才</th>
                     <th style="width:60px;">创业人才</th>
                     <th>务工地点</th>
-                    <th style="width:60px;">务工年限</th>
+                    <th style="width:60px;">务工时间</th>
                     <th style="width:60px;">务工行业</th>
                     <th style="width:72px;">务工年收入</th>
                     <th style="width:60px;">务工职务</th>
                     <th style="width:109px;">联系方式</th>
-                    <th style="width:35px;">身体状况</th>
+                    <th style="width:35px;">残疾</th>
                     <th style="width:35px;">低保</th>
                     <th style="width:35px;">农保</th>
                     <th style="width:35px;">医保</th>
@@ -173,7 +168,6 @@
                         <td>{{ person.remarks|default_if_none:'' }}</td>
                     </tr>
                 {% endfor %}
-
             </table>
         </div>
         <div class="page-box">
@@ -213,6 +207,7 @@
             get_hr_info(tags);
         }
     });
+
 
     // 筛选标签点击事件
     $("div.filter-right label").on('click', function (event) {
@@ -345,7 +340,6 @@
         }
         return tr
     }
-
 </script>
 </body>
 </html>

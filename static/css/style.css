@@ -8321,10 +8321,10 @@ table td {
   float: left;
   overflow: hidden;
   line-height: 44px;
-  border-top: 1px solid #cccdcf;
+  border-bottom: 1px solid #cccdcf;
 }
 .filter-left {
-  width: 80px;
+  width: 130px;
   height: 25px;
   display: inline-block;
   background-color: #9cafbe;
