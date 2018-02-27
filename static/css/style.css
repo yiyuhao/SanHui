@@ -7416,11 +7416,11 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 400;
 }
 #fh5co-header > .navbar li a:hover {
-  color: #f63935;
+  color: #18cdac;
 }
 #fh5co-header > .navbar li.active a {
   background: none !important;
-  color: #f63935;
+  color: #18cdac;
 }
 #fh5co-header .navbar-brand {
   text-transform: uppercase;
@@ -7592,7 +7592,7 @@ h1, h2, h3, h4, h5, h6 {
   left: 0;
   width: 30px;
   height: 2px;
-  background: #e32929;
+  background: #18cdac;
 }
 #fh5co-team .fh5co-staff .fh5co-social a {
   color: #ccc;
@@ -8275,7 +8275,7 @@ a > img.fh5co-align-center {
 }
 /* Table Head */
 table thead th {
-  background-color: #f5f6fa;
+  background-color: #fafafa;
   border-bottom-width: 0;
 }
 
@@ -8297,7 +8297,7 @@ table td, table th {
   font-family: Verdana;
 }
 table th {
-  background-color: #f5f6fa;
+  background-color: #fafafa;
   color: #333;
 }
 table td {
@@ -8321,14 +8321,17 @@ table td {
   float: left;
   overflow: hidden;
   line-height: 44px;
-  border-bottom: 1px solid #cccdcf;
+  border-bottom: 1px solid #f0f1f3;
 }
 .filter-left {
   width: 130px;
   height: 25px;
   display: inline-block;
-  background-color: #9cafbe;
-  color:#fff;
+  /*background-color: #14cdb2;*/
+  border-right-style: solid;
+  border-right-color: #14cdb2;
+  border-right-width: 1px;
+  color: #17ad8d;
   text-align: center;
   line-height: 25px;
 }
@@ -8342,8 +8345,9 @@ table td {
   margin: 0 10px;
 }
 .filter-right label {
-  padding: 0 10px;
+  padding: 0 5px;
   font-weight: 100;
+  font-size: 14px;
   color: #666;
   cursor: pointer;
 }
@@ -8417,7 +8421,7 @@ table td {
   width: 8px;
   height: 23px;
   border-radius: 4px;
-  background-color: #1479ca;
+  background-color: #18cdac;
   margin-right: 10px;
   float: left;
 }

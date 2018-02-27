@@ -1439,7 +1439,7 @@ textarea#message {
 }
 #home-nav ul li a:hover {
 	background-color: #fff !important;
-	color: #ff4b4b !important;
+	color: #18cdac !important;
 }
 #home-nav ul li a{
 	color: #000;
@@ -1448,7 +1448,7 @@ textarea#message {
 	font-size: 15px;
 }
 #home-nav .active a span{
-	color: #ff4b4b !important;
+	color: #18cdac !important;
 }
 .section {
 	float: left;
