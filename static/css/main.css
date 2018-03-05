@@ -77,22 +77,6 @@ h1, h2, h3, h4, h5, h6 {
 /*	margin: 30px 35px;*/
 }
 
-.four-features.four-features-left-bottom {
-    margin: 0 15px 0 15px;
-}
-
-.four-features.four-features-middle-bottom {
-	margin: 0 15px 0 15px;
-}
-
-.four-features.four-features-right-bottom {
-    margin: 0 15px 0 15px;
-}
-
-.four-features.four-features-left-top {
-    margin: 30px 35px 0 0;
-}
-
 .four-features.four-features-right-top {
     margin: 30px 0 0 35px;
 }
@@ -138,7 +122,6 @@ h1, h2, h3, h4, h5, h6 {
 
 
 .four-features .features-content{
-	height: 112px;
 	background-color: #fff;
 }
 
@@ -1453,7 +1436,7 @@ textarea#message {
 .section {
 	float: left;
 	height: 176px;
-	width: 262px;
+	width: 242px;
 	background-color: #fff;
 	cursor: pointer;
 }

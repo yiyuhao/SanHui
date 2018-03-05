@@ -7484,7 +7484,7 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 4em;
   }
 }
-@media screen and (max-width: 1500px) {
+@media screen and (max-width: 1600px) {
   #fh5co-portfolio {
     padding: 2em 15em;
   }
@@ -8331,7 +8331,7 @@ table td {
   border-right-style: solid;
   border-right-color: #14cdb2;
   border-right-width: 1px;
-  color: #17ad8d;
+  color: #169c7e;
   text-align: center;
   line-height: 25px;
 }
@@ -8345,9 +8345,8 @@ table td {
   margin: 0 10px;
 }
 .filter-right label {
-  padding: 0 5px;
+  padding: 0 10px;
   font-weight: 100;
-  font-size: 14px;
   color: #666;
   cursor: pointer;
 }

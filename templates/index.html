@@ -13,6 +13,7 @@
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
 <link href="{% static 'css/main.css' %}" rel="stylesheet">
+<link rel="stylesheet" href="{% static 'css/hover.css' %}">
 
 </head>
 <body>
@@ -52,11 +53,11 @@
                 </div>
             </div>
         </section>
-        <div class="sections" style="position: absolute;left: 50%;bottom: -88px;margin-left:-558px;width: 1117px;">
+        <div class="sections" style="position: absolute;left: 50%;bottom: -88px;margin-left:-585px;width: 1170px;">
             <div style="overflow: hidden;">
-                <div class="section" style="margin-right:23px;" onclick="goNE()">
+                <div class="section hvr-underline-from-center"  style="margin-right:50px;margin-left:25px;" onclick="goNE()">
                     <div style="height: 90px;width:100%;margin: 20px auto;">
-                        <div style="margin-left: 86px;">
+                        <div style="margin-left: 76px;">
                             <img src="{% static 'images/1.png' %}" alt="">
                         </div>
                     </div>
@@ -64,9 +65,9 @@
                         <span style="font-size: 18px;color: #242d44">自然环境</span>
                     </div>
                 </div>
-                <div class="section" style="margin-right:23px;" onclick="goHT()">
+                <div class="section hvr-underline-from-center" style="margin-right:50px;" onclick="goHT()">
                     <div style="height: 90px;width:100%;margin: 20px 0;">
-                        <div style="margin-left: 86px;">
+                        <div style="margin-left: 76px;">
                             <img src="{% static 'images/2.png' %}" alt="">
                         </div>
                     </div>
@@ -74,9 +75,9 @@
                         <span style="font-size: 18px;color: #242d44">历史文化</span>
                     </div>
                 </div>
-                <div class="section" style="margin-right:23px;" onclick="goTR()">
+                <div class="section hvr-underline-from-center" style="margin-right:50px;" onclick="goTR()">
                     <div style="height: 90px;width:100%;margin: 20px 0;">
-                        <div style="margin-left: 86px;">
+                        <div style="margin-left: 76px;">
                             <img src="{% static 'images/3.png' %}" alt="">
                         </div>
                     </div>
@@ -84,9 +85,9 @@
                         <span style="font-size: 18px;color: #242d44">康养旅游</span>
                     </div>
                 </div>
-                <div class="section" onclick="goFM()">
+                <div class="section hvr-underline-from-center" onclick="goFM()">
                     <div style="height: 90px;width:100%;margin: 20px 0;">
-                        <div style="margin-left: 86px;">
+                        <div style="margin-left: 76px;">
                             <img src="{% static 'images/4.png' %}" alt="">
                         </div>
                     </div>
@@ -122,38 +123,38 @@
 				</div>
 			</div>
 
-			<div class="container" style="margin-bottom: 80px;">
-				<div class="row">
-						<div class="col-md-4" style="cursor: pointer;" onclick="goHR()">
-						<div class="four-features four-features-left-bottom">
+			<div class="container" style="margin-bottom: 80px;padding:0">
+				<div style="overflow: hidden;">
+                    <div class="hvr-underline-from-center" style="margin: 0 60px 0 25px">
+						<div class="four-features" style="cursor: pointer;" onclick="goHR()">
 							<div class="features-img">
 								<img src="{% static 'images/home5.png' %}" alt="Responsive image" class="img-responsive">
 							</div>
 							<div class="features-content" style="line-height: 13px;padding-left:20px;">
 								<p style="padding-top: 30px;font-size: 18px;color:#333;">人力资源</p>
-								<p style="padding-top: 15px;font-size: 14px;color:#666;">
+								<p style="padding: 15px 0 30px 0;font-size: 14px;color:#666;">
                                     三会家庭基本情况
 								</p>
 							</div>
 						</div>
 					</div>
-					<div class="col-md-4" style="cursor: pointer;" onclick="goPB()">
-						<div class="four-features four-features-middle-bottom" >
+					<div class="hvr-underline-from-center" style="margin-right: 60px">
+						<div class="four-features" style="cursor: pointer;" onclick="goPB()">
 							<img src="{% static 'images/home7.png' %}" alt="Responsive image" class="img-responsive">
 							<div class="features-content" style="line-height: 13px;padding-left:20px;">
 								<p style="padding-top: 30px;font-size: 18px;color:#333;">医疗卫生</p>
-								<p style="padding-top: 15px;font-size: 14px;color:#666;">
+								<p style="padding: 15px 0 30px 0;font-size: 14px;color:#666;">
                                     三会医疗数据统计
 								</p>
 							</div>
 						</div>
 					</div>
-					<div class="col-md-4" style="cursor: pointer;" onclick="goPL()">
-						<div class="four-features four-features-right-bottom">
+					<div class="hvr-underline-from-center" style="margin-right:0">
+						<div class="four-features" style="cursor: pointer;" onclick="goPL()">
 							<img src="{% static 'images/home4.png' %}"  alt="Responsive image" class="img-responsive">
 							<div class="features-content" style="line-height: 13px;padding-left:20px;">
 								<p style="padding-top: 30px;font-size: 18px;color:#333;">脱贫奔康</p>
-								<p style="padding-top: 15px;font-size: 14px;color:#666;">
+								<p style="padding: 15px 0 30px 0;font-size: 14px;color:#666;">
                                     三会脱贫奔康建设
                                 </p>
 							</div>
