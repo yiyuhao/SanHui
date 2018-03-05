@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6d19973c-be89-4f70-880e-123cb9f78837" name="Default" comment="修改: hr_info.html">
+    <list default="true" id="6d19973c-be89-4f70-880e-123cb9f78837" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/style.css" afterPath="$PROJECT_DIR$/static/css/style.css" />
     </list>
@@ -101,8 +101,8 @@
       <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/static/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="654">
-              <caret line="8363" column="5" lean-forward="true" selection-start-line="8363" selection-start-column="5" selection-end-line="8363" selection-end-column="5" />
+            <state relative-caret-position="558">
+              <caret line="8358" column="20" lean-forward="false" selection-start-line="8358" selection-start-column="20" selection-end-line="8358" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -119,7 +119,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>.</find>
       <find>s</find>
       <find>sv</find>
       <find>svg</find>
@@ -149,6 +148,7 @@
       <find>style=&quot;overflow: hidden;&quot;</find>
       <find>ff4b4b</find>
       <find>#fh5co-header &gt; .navbar li.active a {</find>
+      <find>.filter-right label</find>
     </findStrings>
     <replaceStrings>
       <replace>{% url 'hr_info' %}</replace>
@@ -215,8 +215,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1562" />
-    <option name="width" value="1005" />
+    <option name="x" value="1473" />
+    <option name="width" value="1094" />
     <option name="height" value="1417" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -886,14 +886,21 @@
       <option name="project" value="LOCAL" />
       <updated>1520260089900</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="修改: 筛选条件居中">
+      <created>1520260259969</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1520260259969</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1562" y="0" width="1005" height="1417" extended-state="0" />
+    <frame x="1473" y="0" width="1094" height="1417" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2618807" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24025974" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.48468608" sideWeight="0.4892513" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -926,7 +933,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="修改: 删除先前测试用app&#10;      前端页面更新" />
     <MESSAGE value="修改: 转换脚本: 提供静态跳转地址的转换-如&#10;      href=&quot;hr_info.html&quot;  --&gt; &#10;      href=&quot;{% url 'hr_info' %}&quot;" />
     <MESSAGE value="新增: 添加并注册当前所有View&#10;修改: 转换脚本: 静态跳转地址的转换-如&#10;      href=&quot;hr_info.html&quot;  --&gt; &#10;      href=&quot;{% url 'hr_info' %}&quot;&#10;      增加单引号的情况" />
     <MESSAGE value="新增: xadmin全局配置" />
@@ -951,7 +957,8 @@
     <MESSAGE value="设置主题色#18cdac" />
     <MESSAGE value="修改: 饼图颜色" />
     <MESSAGE value="修改: 0.9" />
-    <option name="LAST_COMMIT_MESSAGE" value="修改: 0.9" />
+    <MESSAGE value="修改: 筛选条件居中" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改: 筛选条件居中" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1399,8 +1406,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/static/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="654">
-          <caret line="8363" column="5" lean-forward="true" selection-start-line="8363" selection-start-column="5" selection-end-line="8363" selection-end-column="5" />
+        <state relative-caret-position="558">
+          <caret line="8358" column="20" lean-forward="false" selection-start-line="8358" selection-start-column="20" selection-end-line="8358" selection-end-column="20" />
           <folding />
         </state>
       </provider>
