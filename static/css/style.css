@@ -8363,6 +8363,7 @@ table td {
   padding: 30px 0 ;
   overflow: hidden;
   color: #000;
+  margin: auto;
 }
 .filter-tag {
   padding: 5px;
