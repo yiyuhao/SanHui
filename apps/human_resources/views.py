@@ -11,8 +11,10 @@ from .adminx import PersonnelInformationAdmin
 from utils.json import model_to_json
 from SanHui.settings import PAGINATION_SETTINGS
 
+from utils.mixin_utils import LoginRequiredMixin
 
-class HrInfoView(View):
+
+class HrInfoView(LoginRequiredMixin, View):
     """人力资源"""
 
     def get(self, request):

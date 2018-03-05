@@ -1,5 +1,23 @@
+from django.core.urlresolvers import reverse
+from django.contrib.auth import authenticate, login
+from django.contrib.auth.backends import ModelBackend
 from django.shortcuts import render
 from django.views.generic.base import View
+from django.contrib.auth.models import AbstractUser
+from django.http import HttpResponseRedirect
+
+
+from .forms import LoginForm
+
+
+class CustomBackend(ModelBackend):
+    def authenticate(self, username=None, password=None, **kwargs):
+        try:
+            user = AbstractUser.objects.get(Q(username=username) | Q(email=username))
+            if user.check_password(password):
+                return user
+        except:
+            return None
 
 
 class FarmingView(View):
@@ -42,6 +60,21 @@ class LoginView(View):
 
     def get(self, request):
         return render(request, 'login.html')
+
+    def post(self, request):
+        login_form = LoginForm(request.POST)
+        if login_form.is_valid():
+            username = request.POST.get('username', '')
+            password = request.POST.get('password', '')
+            # 尝试认证用户并返回user
+            user = authenticate(username=username, password=password)
+            if user:
+                login(request, user)
+                return HttpResponseRedirect(reverse('hr_info'))
+            # 用户名密码错误
+            return render(request, 'login.html', {'msg': '用户名或密码错误'})
+        # 表单字段未验证通过
+        return render(request, 'login.html', {'login_form': login_form})
 
 
 class NaturalView(View):
