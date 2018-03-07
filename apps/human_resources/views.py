@@ -48,7 +48,6 @@ class HrInfoView(LoginRequiredMixin, View):
         # 需要返回给前端总页数
         pages_num = paginator.num_pages
 
-
         # 获取所有筛选标签
         # [
         #     ['group', '组数', (('1', '一组'),
