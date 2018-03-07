@@ -26,7 +26,7 @@ class HrInfoView(LoginRequiredMixin, View):
         num_of_personnel = all_people.count()
 
         # 获取top8常住地/就业意向/务工行业
-        nums = 7
+        nums = 8
         province_ids = [p.permanent_residence.id for p in all_people if p.permanent_residence is not None]
         province_ids = order_by_occur_nums(province_ids)
         provinces = Province.objects.filter(id__in=province_ids)[:nums]
