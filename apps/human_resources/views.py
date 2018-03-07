@@ -26,17 +26,18 @@ class HrInfoView(LoginRequiredMixin, View):
         num_of_personnel = all_people.count()
 
         # 获取top8常住地/就业意向/务工行业
+        nums = 7
         province_ids = [p.permanent_residence.id for p in all_people if p.permanent_residence is not None]
         province_ids = order_by_occur_nums(province_ids)
-        provinces = Province.objects.filter(id__in=province_ids)[:8]
+        provinces = Province.objects.filter(id__in=province_ids)[:nums]
 
         intention_ids = [p.employment_intention.id for p in all_people if p.employment_intention is not None]
         intention_ids = order_by_occur_nums(intention_ids)
-        intentions = EmploymentIntention.objects.filter(id__in=intention_ids)[:8]
+        intentions = EmploymentIntention.objects.filter(id__in=intention_ids)[:nums]
 
         industry_ids = [p.working_industry.id for p in all_people if p.working_industry is not None]
         industry_ids = order_by_occur_nums(industry_ids)
-        industries = WorkingIndustry.objects.filter(id__in=industry_ids)[:8]
+        industries = WorkingIndustry.objects.filter(id__in=industry_ids)[:nums]
 
         # 取第一页
         per_page = PAGINATION_SETTINGS.get('PER_PAGE', 10)
