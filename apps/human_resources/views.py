@@ -9,6 +9,7 @@ from django.views.generic.base import View
 from .models import Province, EmploymentIntention, WorkingIndustry, Family, PersonnelInformation
 from .adminx import PersonnelInformationAdmin
 from utils.json import model_to_json
+from utils.function import order_by_occur_nums
 from SanHui.settings import PAGINATION_SETTINGS
 
 from utils.mixin_utils import LoginRequiredMixin
@@ -34,6 +35,19 @@ class HrInfoView(LoginRequiredMixin, View):
         # 需要返回给前端总页数
         pages_num = paginator.num_pages
 
+        # 获取常住地/就业意向/务工行业
+        province_ids = [p.permanent_residence.id for p in all_people]
+        province_ids = order_by_occur_nums(province_ids)
+        provinces = Province.objects.filter(id__in=province_ids)[:8]
+
+        intention_ids = [p.employment_intention.id for p in all_people]
+        intention_ids = order_by_occur_nums(intention_ids)
+        intentions = EmploymentIntention.objects.filter(id__in=intention_ids)[:8]
+
+        industry_ids = [p.working_industry.id for p in all_people]
+        industry_ids = order_by_occur_nums(industry_ids)
+        industries = WorkingIndustry.objects.filter(id__in=industry_ids)[:8]
+
         # 获取所有筛选标签
         # [
         #     ['group', '组数', (('1', '一组'),
@@ -49,14 +63,11 @@ class HrInfoView(LoginRequiredMixin, View):
             if choices:
                 pass
             elif key_cn == '常住地':
-                obj = Province.objects.all()
-                choices = tuple([(o.filter_name, o.name) for o in obj])
+                choices = tuple([(o.filter_name, o.name) for o in provinces])
             elif key_cn == '就业意向':
-                obj = EmploymentIntention.objects.all()
-                choices = tuple([(o.filter_name, o.name) for o in obj])
+                choices = tuple([(o.filter_name, o.name) for o in intentions])
             elif key_cn == '务工行业':
-                obj = WorkingIndustry.objects.all()
-                choices = tuple([(o.filter_name, o.name) for o in obj])
+                choices = tuple([(o.filter_name, o.name) for o in industries])
             else:
                 continue
             filter_fields.append((key, key_cn, choices))
