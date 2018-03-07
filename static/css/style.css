@@ -8321,10 +8321,10 @@ table td {
   float: left;
   overflow: hidden;
   line-height: 44px;
-  border-top: 1px solid #cccdcf;
+  border-top: 1px solid #e9eaec;
 }
 .filter-left {
-  width: 80px;
+  width: 130px;
   height: 25px;
   display: inline-block;
   background-color: #9cafbe;
@@ -8360,6 +8360,7 @@ table td {
   padding: 30px 0 ;
   overflow: hidden;
   color: #000;
+  margin: auto;
 }
 .filter-tag {
   padding: 5px;
