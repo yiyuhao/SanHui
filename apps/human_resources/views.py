@@ -25,17 +25,7 @@ class HrInfoView(LoginRequiredMixin, View):
         # 数量
         num_of_personnel = all_people.count()
 
-        # 取第一页
-        per_page = PAGINATION_SETTINGS.get('PER_PAGE', 10)
-        paginator = Paginator(all_people, per_page)
-        p = paginator.page(1)
-
-        all_people = p.object_list
-
-        # 需要返回给前端总页数
-        pages_num = paginator.num_pages
-
-        # 获取常住地/就业意向/务工行业
+        # 获取top8常住地/就业意向/务工行业
         province_ids = [p.permanent_residence.id for p in all_people if p.permanent_residence is not None]
         province_ids = order_by_occur_nums(province_ids)
         provinces = Province.objects.filter(id__in=province_ids)[:8]
@@ -47,6 +37,17 @@ class HrInfoView(LoginRequiredMixin, View):
         industry_ids = [p.working_industry.id for p in all_people if p.working_industry is not None]
         industry_ids = order_by_occur_nums(industry_ids)
         industries = WorkingIndustry.objects.filter(id__in=industry_ids)[:8]
+
+        # 取第一页
+        per_page = PAGINATION_SETTINGS.get('PER_PAGE', 10)
+        paginator = Paginator(all_people, per_page)
+        p = paginator.page(1)
+
+        all_people = p.object_list
+
+        # 需要返回给前端总页数
+        pages_num = paginator.num_pages
+
 
         # 获取所有筛选标签
         # [
